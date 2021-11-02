@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/GRISERA/contextualOntology/models/arrangementIDModel"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/arrangementIDModel">
+    <Prefix name="" IRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/arrangementIDModel"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/GRISERA/contextualOntology</Import>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#PersonalTwoPersonsArrangement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArrangementDistance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArrangementInterpersonalDistanceModel"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasArrangementDistance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#arrangementDistanceCasualPersonalZone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#arrangementDistanceIntimateZone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#arrangementDistancePublicZone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#arrangementDistanceSocioConsultiveZone"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#ArrangementDistance"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#arrangementDistanceCasualPersonalZone"/>
+            <NamedIndividual IRI="#arrangementDistanceIntimateZone"/>
+            <NamedIndividual IRI="#arrangementDistancePublicZone"/>
+            <NamedIndividual IRI="#arrangementDistanceSocioConsultiveZone"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ArrangementInterpersonalDistanceModel"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#PersonalTwoPersonsArrangement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArrangementInterpersonalDistanceModel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasArrangementDistance"/>
+            <Class IRI="#ArrangementDistance"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#ArrangementDistance"/>
+        <NamedIndividual IRI="#arrangementDistanceCasualPersonalZone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ArrangementDistance"/>
+        <NamedIndividual IRI="#arrangementDistanceIntimateZone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ArrangementDistance"/>
+        <NamedIndividual IRI="#arrangementDistancePublicZone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ArrangementDistance"/>
+        <NamedIndividual IRI="#arrangementDistanceSocioConsultiveZone"/>
+    </ClassAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasArrangementDistance"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasArrangementDistance"/>
+        <Class IRI="#ArrangementInterpersonalDistanceModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasArrangementDistance"/>
+        <Class IRI="#ArrangementDistance"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ArrangementDistance</IRI>
+        <Literal xml:lang="en">Values describing a distance between two persons.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ArrangementInterpersonalDistanceModel</IRI>
+        <Literal xml:lang="en">A model of two persons arrangment allowing to describe impersonal distance categorization introduced by T. T. Hall. The model assumes that there are four zones: intimate, casual, socioconsultive and public.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#arrangementDistanceCasualPersonalZone</IRI>
+        <Literal xml:lang="en">Casual zone.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#arrangementDistanceIntimateZone</IRI>
+        <Literal xml:lang="en">Intimate zone.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#arrangementDistancePublicZone</IRI>
+        <Literal xml:lang="en">Public zone.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#arrangementDistanceSocioConsultiveZone</IRI>
+        <Literal xml:lang="en">Socioconsultive zone.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasArrangementDistance</IRI>
+        <Literal xml:lang="en">An object property allowing to define in what zone two persons taking part in an activity are.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

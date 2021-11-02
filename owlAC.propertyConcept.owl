@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept">
+    <Prefix name="" IRI="http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/GRISERA/contextualOntology</Import>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Experiment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Participant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ParticipantState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#RegisteredData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#TimeSeries"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PropertyConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasKey"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasValue"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
+        <Class IRI="#PropertyConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
+        <Class IRI="#PropertyConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Experiment"/>
+        <Class IRI="#PropertyConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Participant"/>
+        <Class IRI="#PropertyConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ParticipantState"/>
+        <Class IRI="#PropertyConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
+        <Class IRI="#PropertyConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#RegisteredData"/>
+        <Class IRI="#PropertyConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#TimeSeries"/>
+        <Class IRI="#PropertyConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Property"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasKey"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Property"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasValue"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasProperty"/>
+        <Class IRI="#PropertyConcept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasProperty"/>
+        <Class IRI="#Property"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasKey"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasValue"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasKey"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasValue"/>
+        <Class IRI="#Property"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasKey"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Property</IRI>
+        <Literal xml:lang="en">User-defined property of the notion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PropertyConcept</IRI>
+        <Literal xml:lang="en">A concept allowing to add user-defined properties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasKey</IRI>
+        <Literal xml:lang="en">Data type property allowing to define a key of a key-value pair.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasProperty</IRI>
+        <Literal xml:lang="en">Object property allowing to define what property is defined for the instance of property concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasValue</IRI>
+        <Literal xml:lang="en">Data type property allowing to define a value of a key-value pair.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

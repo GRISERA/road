@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/GRISERA/contextualOntology/models/bigFiveModel"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/bigFiveModel">
+    <Prefix name="" IRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/bigFiveModel"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/GRISERA/contextualOntology</Import>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Personality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonalityBigFiveModel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#agreeablenessValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#conscientiousnessValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#extroversionValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#neuroticismValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#openessValue"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#PersonalityBigFiveModel"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Personality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalityBigFiveModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#agreeablenessValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalityBigFiveModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#conscientiousnessValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalityBigFiveModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#extroversionValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalityBigFiveModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#neuroticismValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalityBigFiveModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#openessValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#agreeablenessValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#conscientiousnessValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#extroversionValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#neuroticismValue"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#openessValue"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#agreeablenessValue"/>
+        <Class IRI="#PersonalityBigFiveModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#conscientiousnessValue"/>
+        <Class IRI="#PersonalityBigFiveModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#extroversionValue"/>
+        <Class IRI="#PersonalityBigFiveModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#neuroticismValue"/>
+        <Class IRI="#PersonalityBigFiveModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#openessValue"/>
+        <Class IRI="#PersonalityBigFiveModel"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#agreeablenessValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#conscientiousnessValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#extroversionValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#neuroticismValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#openessValue"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PersonalityBigFiveModel</IRI>
+        <Literal xml:lang="en">An implementation of the Big Five Model (Big Factor Model) which allows to define five factors: openess, neuroticism, agreeablesness, conscientiousness and extroversion as a value in the range &lt;0,1&gt;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#agreeablenessValue</IRI>
+        <Literal xml:lang="en">A data type property defining how much a person is kind, sympathetic, cooperative, warm, and considerate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#conscientiousnessValue</IRI>
+        <Literal xml:lang="en">A data type property defining how much a person is neat, and systematic; also including such elements as carefulness, thoroughness, and deliberation (a tendency to think carefully before acting).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#extroversionValue</IRI>
+        <Literal xml:lang="en">A data type property defining how much a person is outgoing, talkative and has energetic behavior, whereas an introversion is manifested in more reflective and reserved behavior. It takes value between 0 and 1, where 0 denotes extroversion and 1 introversion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#neuroticismValue</IRI>
+        <Literal xml:lang="en">A data type property defining how much a person has lack of self-control, poor ability to manage psychological stress, and a tendency to complain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#openessValue</IRI>
+        <Literal xml:lang="en">A data type property defining how much a person is open, reflects imagination, creativity, intellectual curiosity, and appreciation of esthetic experiences. Broadly, an openness (intellect) relates to the ability and interest in attending to and processing complex stimuli.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceSomatotypeModel"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceSomatotypeModel">
+    <Prefix name="" IRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceSomatotypeModel"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/GRISERA/contextualOntology</Import>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Apperance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ApperanceSomatotypeModel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSomatotypeEctomorph"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSomatotypeEndomorph"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSomatotypeMesomorph"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#ApperanceSomatotypeModel"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Apperance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApperanceSomatotypeModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSomatotypeEctomorph"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApperanceSomatotypeModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSomatotypeEndomorph"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApperanceSomatotypeModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSomatotypeMesomorph"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSomatotypeEctomorph"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSomatotypeEndomorph"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasSomatotypeMesomorph"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSomatotypeEctomorph"/>
+        <Class IRI="#ApperanceSomatotypeModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSomatotypeEndomorph"/>
+        <Class IRI="#ApperanceSomatotypeModel"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSomatotypeMesomorph"/>
+        <Class IRI="#ApperanceSomatotypeModel"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSomatotypeEctomorph"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSomatotypeEndomorph"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSomatotypeMesomorph"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ApperanceSomatotypeModel</IRI>
+        <Literal xml:lang="en">A model of apperance allowing to describe somatotypes. Simple version of somatotypes taxonomy introduced by W. H. Sheldon. The model does not allow to calculate values of hasSomatotype... roles. These values must be precalculated and directly modelled.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSomatotypeEctomorph</IRI>
+        <Literal xml:lang="en">A data type property allowing to rate how much somebody has ectomorph body type in a range &lt;1,7&gt;. The pure ectomorph has the value of hasSomatotypeEctomorph equal to 7, hasSomatotypeEndomorph equal to 1 and hasSomatotypeMesomporph equal to 1. The typical features of ectomorph encompass delicate bone structure, flat chest, small shoulders, and lean muscle mass. A person with the ectomorph body type often finds hard to gain weight and has a fast metabolism.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSomatotypeEndomorph</IRI>
+        <Literal xml:lang="en">A data type property allowing to rate how much somebody has endomorph body type in a range &lt;1,7&gt;. The pure endomorph has the value of hasSomatotypeEndomorph equal to 7, hasSomatotypeEctomorph equal to 1 and hasSomatotypeMesomporph equal to 1. Typical features of the endomorph encompass soft and round body, being short, stocky build, round physique. A person with the endomorph body type often finds hard to lose weight and has a slow metabolism. He or she gains muscle and fat very easily.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSomatotypeMesomorph</IRI>
+        <Literal xml:lang="en">A data type property allowing to rate how much somebody has mesomorph body type in a range &lt;1,7&gt;. The pure mesomorph has the value of hasSomatotypeMesomorph equal to 7, hasSomatotypeEndomorph equal to 1 and hasSomatotypeEctomorph equal to 1. Typical features of the mesomorph encompass athletic body structure, well defined muscles, generally hard body and rectangular shaped body. A person with the mesomorph body type is often strong, gain muscles easily and gains fat more easily than ectomorphs.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion">
+    <Prefix name="" IRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion/appearanceOcclusion"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/GRISERA/contextualOntology</Import>
+    <Declaration>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Apperance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ApperanceOcclusionModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BeardValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MoustacheValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBeardValue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMoustacheValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasGlasses"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#appearanceHeavy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#appearanceNo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#appearanceSome"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#BeardValue"/>
+        <Class IRI="#MoustacheValue"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BeardValue"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#appearanceHeavy"/>
+            <NamedIndividual IRI="#appearanceNo"/>
+            <NamedIndividual IRI="#appearanceSome"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#ApperanceOcclusionModel"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Apperance"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApperanceOcclusionModel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBeardValue"/>
+            <Class IRI="#BeardValue"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApperanceOcclusionModel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMoustacheValue"/>
+            <Class IRI="#MoustacheValue"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ApperanceOcclusionModel"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasGlasses"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#BeardValue"/>
+        <NamedIndividual IRI="#appearanceHeavy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeardValue"/>
+        <NamedIndividual IRI="#appearanceNo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BeardValue"/>
+        <NamedIndividual IRI="#appearanceSome"/>
+    </ClassAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasBeardValue"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasMoustacheValue"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBeardValue"/>
+        <Class IRI="#ApperanceOcclusionModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMoustacheValue"/>
+        <Class IRI="#ApperanceOcclusionModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBeardValue"/>
+        <Class IRI="#BeardValue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMoustacheValue"/>
+        <Class IRI="#MoustacheValue"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasGlasses"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasGlasses"/>
+        <Class IRI="#ApperanceOcclusionModel"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasGlasses"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ApperanceOcclusionModel</IRI>
+        <Literal xml:lang="en">A model of an apperance allowing to describe occlussions: beard, moustache and glasses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BeardValue</IRI>
+        <Literal>A value representing if and what kind of beard a participant has.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MoustacheValue</IRI>
+        <Literal xml:lang="en">A value representing if and what kind of moustache a participant has.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#appearanceHeavy</IRI>
+        <Literal xml:lang="en">The value representing that an oclussion (beard or moustache) is heavy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#appearanceNo</IRI>
+        <Literal xml:lang="en">The value representing that there is no specific type of oclussion (beard or moustache).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#appearanceSome</IRI>
+        <Literal xml:lang="en">The value representing that an oclussion (beard or moustache) is little.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasBeardValue</IRI>
+        <Literal xml:lang="en">An object property allowing to define if and what kind of beard a participant has.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasGlasses</IRI>
+        <Literal xml:lang="en">A data type property allowing to define if a participant wears glasses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasMoustacheValue</IRI>
+        <Literal xml:lang="en">An object property allowing to define if and what kind of moustache a participant has.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
