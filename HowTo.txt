@@ -1,0 +1,10 @@
+How to create an ontology which imports all the ROAD modules:
+1. Download all the files into one directory.
+2. In Protege open (File->Open) the core ontology owlAC.owl
+3. Open in Protege, in the same window (answer Yes to the question Do you want to open the ontology in the current window) the ontology owlAC.propertyConcept.owl
+4. Open all the remaining ontologies using the same method
+5. Create a new ontology (File->New) in the same window (answer Yes to the question Do you want to open the ontology in the current window)
+6. In the tab Active Ontology, section Ontology imports (usually in the bottom part of the tab) press the plus icon at Direct imports
+7. Pick "Import an ontology that is already loaded in the workspace.", Continue
+8. Check all the ontologies, Continue
+9. Press Finish

@@ -209,6 +209,9 @@
         <DataProperty IRI="#measureRange"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#measureUnit"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#name"/>
     </Declaration>
     <Declaration>
@@ -1036,6 +1039,10 @@
         <Class IRI="#Measure"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#measureUnit"/>
+        <Class IRI="#Measure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#name"/>
         <Class abbreviatedIRI="owl:Thing"/>
     </DataPropertyDomain>
@@ -1065,6 +1072,10 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#measureRange"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#measureUnit"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1528,6 +1539,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#measureRange</IRI>
         <Literal xml:lang="en">A data property allowing to define a range of a measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#measureUnit</IRI>
+        <Literal>The datatype property, which allows for defiing unit of measure using The Unified Code for Units of Measure [https://ucum.org/trac].</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
