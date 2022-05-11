@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203">
+    <Prefix name="" IRI="http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.semanticweb.org/GRISERA/contextualOntology</Import>
+    <Declaration>
+        <Class IRI="#BaselineActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BaselineActivityExecution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StimulatedActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StimulatedActivityExecution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stimulus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TaggingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TaggingActivityExecution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#emotionStimulated"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContext"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#clipEndTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#clipStartTimestamp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDuration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasFilename"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLink"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSource"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSourceDataset"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSourceLink"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#BaselineActivity"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BaselineActivityExecution"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StimulatedActivity"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StimulatedActivityExecution"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TaggingActivity"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TaggingActivityExecution"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Apperance"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Arrangement"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Channel"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Experiment"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#LifeActivity"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Measure"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#MeasureName"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Modality"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Participant"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ParticipantState"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Participation"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Personality"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#RegisteredChannel"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#RegisteredData"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Sex"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#TimeSeries"/>
+        <Class IRI="#Stimulus"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BaselineActivity"/>
+        <Class IRI="#TaggingActivity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#BaselineActivityExecution"/>
+        <Class IRI="#TaggingActivityExecution"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#StimulatedActivity"/>
+        <Class IRI="#TaggingActivity"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#StimulatedActivityExecution"/>
+        <Class IRI="#TaggingActivityExecution"/>
+    </DisjointClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#emotionStimulated"/>
+        <Class IRI="#Stimulus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContext"/>
+        <Class IRI="#Stimulus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#emotionStimulated"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#EmotionalStateMeasureName"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContext"/>
+        <Class IRI="#Context"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#clipEndTimestamp"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#clipStartTimestamp"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDuration"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasFilename"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasLink"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSource"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSourceDataset"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasSourceLink"/>
+        <Class IRI="#Context"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#clipEndTimestamp"/>
+        <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#clipStartTimestamp"/>
+        <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDuration"/>
+        <Datatype abbreviatedIRI="xsd:unsignedLong"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasFilename"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLink"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSource"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSourceDataset"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSourceLink"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BaselineActivity</IRI>
+        <Literal xml:lang="en">A pattern of an activity done within an experiment. This pattern describes an activity which aim is to achieve a neutral state of participants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BaselineActivityExecution</IRI>
+        <Literal xml:lang="en">An execution of a specific baseline activity described by a baseline activity pattern.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Context</IRI>
+        <Literal xml:lang="en">The concept determining meta information about the stimulus.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StimulatedActivity</IRI>
+        <Literal xml:lang="en">A pattern of an activity done within an experiment. This pattern describes an activity which aim is to achieve a specific emotional state of participants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StimulatedActivityExecution</IRI>
+        <Literal xml:lang="en">An execution of a specific stimulated activity described by a stimulated activity pattern.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Stimulus</IRI>
+        <Literal xml:lang="en">Concept defining thing or event, which aim is to evokes a specific emotional state of the participants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TaggingActivity</IRI>
+        <Literal xml:lang="en">A pattern of an activity done within an experiment. This pattern describes a tagging activity of participants. During this activity pattern participants asses their emotional state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TaggingActivityExecution</IRI>
+        <Literal xml:lang="en">An execution of a specific tagging activity described by a tagging activity pattern.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#clipEndTimestamp</IRI>
+        <Literal xml:lang="en">Ending timestamp of the clip used as stimulus as a fragment of the original source material. The timestamp is expressed in miliseconds from the begining of the original source material.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#clipStartTimestamp</IRI>
+        <Literal xml:lang="en">Starting timestamp of the clip used as stimulus as a fragment of the original source material. The timestamp is expressed in miliseconds from the begining of the original source material.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#emotionStimulated</IRI>
+        <Literal xml:lang="en">An object property allowing to state what emotional state of the participant is intended to be stimulated.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasContext</IRI>
+        <Literal xml:lang="en">An object property allowing to express meta information of the stimulus.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasDuration</IRI>
+        <Literal xml:lang="en">Duration of stimulus. The duration is expressed in miliseconds.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasFilename</IRI>
+        <Literal xml:lang="en">Name of the file used as stimulus material.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLink</IRI>
+        <Literal xml:lang="en">Link to the stimulus material available in an online repository.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSource</IRI>
+        <Literal xml:lang="en">Source of the selected stimulus material, such as the original full feature film in the case of movie snippets as stimulus material.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSourceDataset</IRI>
+        <Literal xml:lang="en">Source of the selected stimulus material, such as the original full feature film in the case of movie snippets as stimulus material.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSourceLink</IRI>
+        <Literal xml:lang="en">Link to additional information about the source of the stimulus material.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

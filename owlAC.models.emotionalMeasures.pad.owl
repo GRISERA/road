@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/pad">
-    <Prefix name="" IRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/pad#"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/pad"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -19,13 +19,37 @@
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#EmotionalStateMeasureName"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PADModelDimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PADModelDimensionName"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#PADModelMeasure"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PADModelMeasureName"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#PADModelQuadrant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PADModelQuadrantName"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasureName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HVHA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HVLA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LVHA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LVLA"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#arousal"/>
@@ -37,13 +61,37 @@
         <NamedIndividual IRI="#valence"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="#PADModelMeasureName"/>
+        <Class IRI="#PADModelDimensionName"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#arousal"/>
             <NamedIndividual IRI="#dominance"/>
             <NamedIndividual IRI="#valence"/>
         </ObjectOneOf>
     </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PADModelQuadrantName"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#HVHA"/>
+            <NamedIndividual IRI="#HVLA"/>
+            <NamedIndividual IRI="#LVHA"/>
+            <NamedIndividual IRI="#LVLA"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#PADModelDimension"/>
+        <Class IRI="#PADModelMeasure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PADModelDimension"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasureName"/>
+            <Class IRI="#PADModelDimensionName"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PADModelDimensionName"/>
+        <Class IRI="#PADModelMeasureName"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#PADModelMeasure"/>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#EmotionalStateMeasure"/>
@@ -59,15 +107,70 @@
         <Class IRI="#PADModelMeasureName"/>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#EmotionalStateMeasureName"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PADModelQuadrant"/>
+        <Class IRI="#PADModelMeasure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PADModelQuadrant"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasureName"/>
+            <Class IRI="#PADModelQuadrantName"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PADModelQuadrantName"/>
+        <Class IRI="#PADModelMeasureName"/>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HVHA</IRI>
+        <Literal xml:lang="en">The individual representing the quadrant of high valence and high arousal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HVLA</IRI>
+        <Literal xml:lang="en">The individual representing the quadrant of high valence and low arousal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LVHA</IRI>
+        <Literal xml:lang="en">The individual representing the quadrant of low valence and high arousal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LVLA</IRI>
+        <Literal xml:lang="en">The individual representing the quadrant of low valence and low arousal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PADModelDimension</IRI>
+        <Literal xml:lang="en">Specific measure representing dimension for PAD model, this is an emotional state measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PADModelDimensionName</IRI>
+        <Literal xml:lang="en">A list of dimension names for PAD model (Pleasentness, Arousal, Dominance).</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#PADModelMeasure</IRI>
-        <Literal>Specific measure representing emotional state for two-dimensional model, this is an emotional state measure.</Literal>
+        <Literal xml:lang="en">Specific measure representing emotional state for PAD model, this is an emotional state measure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#PADModelMeasureName</IRI>
-        <Literal xml:lang="en">A list of emotional states names for PAD model (Pleasentness, Arousal, Dominance).</Literal>
+        <Literal xml:lang="en">A list of emotional state names for PAD mdel.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PADModelQuadrant</IRI>
+        <Literal xml:lang="en">Specific measure representing quadrant in two-dimensional model, this is an emotional state measure.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PADModelQuadrantName</IRI>
+        <Literal xml:lang="en">A list of quadrants for two-dimensional model (Valence-Arousal): HVHA, HVLA, LVHA, LVLA (H, L, A and V stand for high, low, arousal and valence respectively).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

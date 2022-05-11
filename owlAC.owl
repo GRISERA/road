@@ -113,6 +113,9 @@
         <Class IRI="#Sex"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SignalDependentMeasureName"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TimeSeries"/>
     </Declaration>
     <Declaration>
@@ -185,10 +188,19 @@
         <ObjectProperty IRI="#hasSex"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isNextOfActivity"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isNextOfActivityExecution"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isPartOf"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isScenarioOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nextActivity"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#nextActivityExecution"/>
@@ -344,11 +356,25 @@
         </ObjectUnionOf>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="#Activity"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#Activity"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ActivityExecution"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasActivity"/>
             <Class IRI="#Activity"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivityExecution"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#ActivityExecution"/>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConstantLengthEpochTimeSeries"/>
@@ -542,6 +568,10 @@
     <SubClassOf>
         <Class IRI="#RegularlySpacedTimestampTimeSeries"/>
         <Class IRI="#TimestampTimeSeries"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SignalDependentMeasureName"/>
+        <Class IRI="#MeasureName"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TimeSeries"/>
@@ -783,6 +813,10 @@
         <ObjectProperty IRI="#isScenarioOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
+        <ObjectProperty IRI="#isNextOfActivity"/>
+        <ObjectProperty IRI="#nextActivity"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
         <ObjectProperty IRI="#isNextOfActivityExecution"/>
         <ObjectProperty IRI="#nextActivityExecution"/>
     </InverseObjectProperties>
@@ -914,6 +948,17 @@
         <Class IRI="#Participant"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isPartOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#Activity"/>
+            <Class IRI="#ActivityExecution"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#nextActivity"/>
+        <Class IRI="#Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#nextActivityExecution"/>
         <Class IRI="#ActivityExecution"/>
     </ObjectPropertyDomain>
@@ -992,6 +1037,17 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSex"/>
         <Class IRI="#Sex"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isPartOf"/>
+        <ObjectUnionOf>
+            <Class IRI="#Activity"/>
+            <Class IRI="#ActivityExecution"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#nextActivity"/>
+        <Class IRI="#Activity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#nextActivityExecution"/>
@@ -1291,6 +1347,16 @@
         <Literal xml:lang="en">Holds information about a sex of participants.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="#conceptType"/>
+        <IRI>#SignalDependentMeasureName</IRI>
+        <Literal xml:lang="en">abstract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SignalDependentMeasureName</IRI>
+        <Literal xml:lang="en">A measure name dependent on the signal. This is a concept for which subconcepts can be modelled to define so called user-defined model extension points. To define lexicons for measure names subconcepts of this concept should be defined.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TimeSeries</IRI>
         <Literal xml:lang="en">Time series for a specific measure.</Literal>
@@ -1482,8 +1548,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isNextOfActivity</IRI>
+        <Literal xml:lang="en">An inverse of the object property nextActivity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isNextOfActivityExecution</IRI>
         <Literal xml:lang="en">An inverse of the object property nextActivityExuction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isPartOf</IRI>
+        <Literal xml:lang="en">An object property allowing to define that one activity is a part of the other and that one execution of activity is a part of the other execution.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1627,8 +1703,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#nextActivityExecution</IRI>
+        <IRI>#nextActivity</IRI>
         <Literal xml:lang="en">An object property allowing to define a sequence of activities in a scenario.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#nextActivityExecution</IRI>
+        <Literal xml:lang="en">An object property allowing to define a sequence of activities&apos; executions in a scenario.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
