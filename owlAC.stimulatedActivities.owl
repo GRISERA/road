@@ -44,6 +44,9 @@
         <ObjectProperty IRI="#hasContext"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasStimulus"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#clipEndTimestamp"/>
     </Declaration>
     <Declaration>
@@ -138,6 +141,13 @@
         <ObjectProperty IRI="#hasContext"/>
         <Class IRI="#Stimulus"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStimulus"/>
+        <ObjectUnionOf>
+            <Class IRI="#BaselineActivity"/>
+            <Class IRI="#StimulatedActivity"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#emotionStimulated"/>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#EmotionalStateMeasureName"/>
@@ -145,6 +155,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasContext"/>
         <Class IRI="#Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStimulus"/>
+        <Class IRI="#Stimulus"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#clipEndTimestamp"/>
@@ -299,6 +313,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasSourceLink</IRI>
         <Literal xml:lang="en">Link to additional information about the source of the stimulus material.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasStimulus</IRI>
+        <Literal xml:lang="en">An object property allowing to state what stimulus is used during the activity.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
