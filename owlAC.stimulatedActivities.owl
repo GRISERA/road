@@ -75,16 +75,44 @@
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#BaselineActivity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasStimulus"/>
+            <Class IRI="#Stimulus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#BaselineActivityExecution"/>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BaselineActivityExecution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity"/>
+            <Class IRI="#BaselineActivity"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#StimulatedActivity"/>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#StimulatedActivity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasStimulus"/>
+            <Class IRI="#Stimulus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#StimulatedActivityExecution"/>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StimulatedActivityExecution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity"/>
+            <Class IRI="#StimulatedActivity"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TaggingActivity"/>
@@ -93,6 +121,13 @@
     <SubClassOf>
         <Class IRI="#TaggingActivityExecution"/>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TaggingActivityExecution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity"/>
+            <Class IRI="#TaggingActivity"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
