@@ -13,6 +13,7 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://www.semanticweb.org/GRISERA/contextualOntology</Import>
+    <Import>http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept</Import>
     <Declaration>
         <Class IRI="#BaselineActivity"/>
     </Declaration>
@@ -93,6 +94,10 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Context"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#PropertyConcept"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#StimulatedActivity"/>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
     </SubClassOf>
@@ -129,29 +134,6 @@
             <Class IRI="#TaggingActivity"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <DisjointClasses>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Apperance"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Arrangement"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Channel"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Experiment"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#LifeActivity"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Measure"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#MeasureName"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Modality"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Participant"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ParticipantState"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Participation"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Personality"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#RegisteredChannel"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#RegisteredData"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Sex"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#TimeSeries"/>
-        <Class IRI="#Stimulus"/>
-    </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#BaselineActivity"/>
         <Class IRI="#TaggingActivity"/>
