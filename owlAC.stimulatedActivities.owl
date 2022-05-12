@@ -15,6 +15,9 @@
     <Import>http://www.semanticweb.org/GRISERA/contextualOntology</Import>
     <Import>http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept</Import>
     <Declaration>
+        <Class IRI="#AffectiveMultimediaDatabase"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#BaselineActivity"/>
     </Declaration>
     <Declaration>
@@ -45,6 +48,9 @@
         <ObjectProperty IRI="#hasContext"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasSourceDataset"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasStimulus"/>
     </Declaration>
     <Declaration>
@@ -66,10 +72,22 @@
         <DataProperty IRI="#hasSource"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasSourceDataset"/>
+        <DataProperty IRI="#hasSourceLink"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasSourceLink"/>
+        <NamedIndividual IRI="#GAPED"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HHAD"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IADS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IAPS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NAPS"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#BaselineActivity"/>
@@ -150,6 +168,26 @@
         <Class IRI="#StimulatedActivityExecution"/>
         <Class IRI="#TaggingActivityExecution"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#AffectiveMultimediaDatabase"/>
+        <NamedIndividual IRI="#GAPED"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AffectiveMultimediaDatabase"/>
+        <NamedIndividual IRI="#HHAD"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AffectiveMultimediaDatabase"/>
+        <NamedIndividual IRI="#IADS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AffectiveMultimediaDatabase"/>
+        <NamedIndividual IRI="#IAPS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AffectiveMultimediaDatabase"/>
+        <NamedIndividual IRI="#NAPS"/>
+    </ClassAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#emotionStimulated"/>
         <Class IRI="#Stimulus"/>
@@ -157,6 +195,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasContext"/>
         <Class IRI="#Stimulus"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSourceDataset"/>
+        <Class IRI="#Context"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasStimulus"/>
@@ -174,6 +216,10 @@
         <Class IRI="#Context"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSourceDataset"/>
+        <Class IRI="#AffectiveMultimediaDatabase"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasStimulus"/>
         <Class IRI="#Stimulus"/>
     </ObjectPropertyRange>
@@ -202,10 +248,6 @@
         <Class IRI="#Context"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#hasSourceDataset"/>
-        <Class IRI="#Context"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#hasSourceLink"/>
         <Class IRI="#Context"/>
     </DataPropertyDomain>
@@ -234,13 +276,14 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#hasSourceDataset"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#hasSourceLink"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AffectiveMultimediaDatabase</IRI>
+        <Literal xml:lang="en">Affective multimedia databases being a storages for stimulus often in the form of images, sounds or videos.</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#BaselineActivity</IRI>
@@ -255,6 +298,56 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Context</IRI>
         <Literal xml:lang="en">The concept determining meta information about the stimulus.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GAPED</IRI>
+        <Literal xml:lang="en">Geneva Affective PicturE Database</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#GAPED</IRI>
+        <Literal xml:lang="en">Dan-Glauser, E.S., Scherer, K.R.: The Geneva Affective PicturE Database (GAPED): A new 730 picture database focusing on valence and normative significance. Behavior Research Methods, Vol. 43(2). (2011) 468–477</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HHAD</IRI>
+        <Literal xml:lang="en">Hollywood Human Action dataset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#HHAD</IRI>
+        <Literal xml:lang="en">Ivan Laptev, Marcin Marszalek, Cordelia Schmid, and Benjamin Rozenfeld, Learning realistic human actions from movies, IEEE Conference on Computer Vision &amp; Pattern Recognition, 2008.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IADS</IRI>
+        <Literal xml:lang="en">International Affective Digital Sounds System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#IADS</IRI>
+        <Literal xml:lang="en">Bradley, M.M., Lang, P.J.: The International Affective Digitized Sounds (2nd Edition; IADS-2): affective ratings of sounds and instruction manual. Technical report B-3. University of Florida, Gainesville, FL (2007)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IAPS</IRI>
+        <Literal xml:lang="en">International Affective Picture System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#IAPS</IRI>
+        <Literal xml:lang="en">Lang, P.J., Bradley, M.M., Cuthbert, B.N.: International affective picture system (IAPS): Affective ratings of pictures and instruction manual. Technical Report A-8. University of Florida, Gainesville, FL (2008)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NAPS</IRI>
+        <Literal xml:lang="en">Nencki Affective Pictures System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>#NAPS</IRI>
+        <Literal xml:lang="en">Marchewka A., Żurawski Ł., Jednoróg K., Grabowska A.: The Nencki Affective Picture System (NAPS). Introduction to a novel standardized wide range high quality realistic pictures database (resubmitted, 2013)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
