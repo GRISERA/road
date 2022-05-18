@@ -36,7 +36,9 @@ Declaration(NamedIndividual(:recSession3BAE))
 Declaration(NamedIndividual(:recSession4SAE))
 Declaration(NamedIndividual(:recStimulusWatchingBAE))
 Declaration(NamedIndividual(:recTaggingTAE))
+Declaration(NamedIndividual(:resistanceMeasure))
 Declaration(NamedIndividual(:seagullsFinalBS))
+Declaration(NamedIndividual(:segullFinalContext))
 Declaration(NamedIndividual(:session3BA))
 Declaration(NamedIndividual(:session3BAE))
 Declaration(NamedIndividual(:session4SA))
@@ -206,9 +208,22 @@ ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#h
 ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recTaggingTAE)
 ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recTaggingTAE :partTaggingTAE)
 
+# Individual: :resistanceMeasure (:resistanceMeasure)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2021/10/untitled-ontology-176#EDAMeasure> :resistanceMeasure)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasureName> :resistanceMeasure <http://www.semanticweb.org/teresa/ontologies/2021/10/untitled-ontology-176#resistance>)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#measureUnit> :resistanceMeasure "Ohm"^^xsd:string)
+
 # Individual: :seagullsFinalBS (:seagullsFinalBS)
 
 ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#Stimulus> :seagullsFinalBS)
+ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasContext> :seagullsFinalBS :segullFinalContext)
+
+# Individual: :segullFinalContext (:segullFinalContext)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#Context> :segullFinalContext)
+DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasDuration> :segullFinalContext "16870"^^xsd:unsignedLong)
+DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasFilename> :segullFinalContext "seagulls_Final.avi"^^xsd:string)
 
 # Individual: :session3BA (:session3BA)
 
@@ -292,32 +307,44 @@ ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/unt
 # Individual: :ts1 (:ts1)
 
 ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts1)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts1 :resistanceMeasure)
 ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts1 :obsBaseStimulusWatchingBAE)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts1 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts1.csv"^^xsd:string)
 
 # Individual: :ts2 (:ts2)
 
 ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts2)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts2 :resistanceMeasure)
 ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts2 :obsIdleBAE)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts2 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts2.csv"^^xsd:string)
 
 # Individual: :ts3 (:ts3)
 
 ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts3)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts3 :resistanceMeasure)
 ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts3 :obsSession3BAE)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts3 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts3.csv"^^xsd:string)
 
 # Individual: :ts4 (:ts4)
 
 ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts4)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts4 :resistanceMeasure)
 ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts4 :obsSession4SAE)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts4 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts4.csv"^^xsd:string)
 
 # Individual: :ts5 (:ts5)
 
 ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts5)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts5 :resistanceMeasure)
 ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts5 :obsStimulusWatchingBAE)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts5 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts5.csv"^^xsd:string)
 
 # Individual: :ts6 (:ts6)
 
 ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts6)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts6 :resistanceMeasure)
 ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts6 :obsTaggingTAE)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts6 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts6.csv"^^xsd:string)
 
 
 )
