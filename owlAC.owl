@@ -113,6 +113,9 @@
         <Class IRI="#Sex"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SignalDependentMeasure"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#SignalDependentMeasureName"/>
     </Declaration>
     <Declaration>
@@ -568,6 +571,10 @@
     <SubClassOf>
         <Class IRI="#RegularlySpacedTimestampTimeSeries"/>
         <Class IRI="#TimestampTimeSeries"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SignalDependentMeasure"/>
+        <Class IRI="#Measure"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SignalDependentMeasureName"/>
@@ -1345,6 +1352,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Sex</IRI>
         <Literal xml:lang="en">Holds information about a sex of participants.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SignalDependentMeasure</IRI>
+        <Literal xml:lang="en">A specific measure representing a signal dependent measure name.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#conceptType"/>

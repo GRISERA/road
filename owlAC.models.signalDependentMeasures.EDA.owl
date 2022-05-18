@@ -14,6 +14,9 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://www.semanticweb.org/GRISERA/contextualOntology</Import>
     <Declaration>
+        <Class IRI="#EDAMeasure"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#EDAMeasureName"/>
     </Declaration>
     <Declaration>
@@ -25,6 +28,10 @@
     <Declaration>
         <NamedIndividual IRI="#voltage"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="#EDAMeasure"/>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#SignalDependentMeasure"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#EDAMeasureName"/>
         <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#SignalDependentMeasureName"/>

@@ -1,0 +1,323 @@
+Prefix(:=<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-246#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-246>
+Import(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion>)
+Import(<http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman>)
+Import(<http://www.semanticweb.org/teresa/ontologies/2021/10/untitled-ontology-176>)
+Import(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203>)
+
+Declaration(NamedIndividual(:baseStimulusWatchingBA))
+Declaration(NamedIndividual(:baseStimulusWatchingBAE))
+Declaration(NamedIndividual(:ethnicity))
+Declaration(NamedIndividual(:idleBA))
+Declaration(NamedIndividual(:idleBAE))
+Declaration(NamedIndividual(:nationality))
+Declaration(NamedIndividual(:obsBaseStimulusWatchingBAE))
+Declaration(NamedIndividual(:obsIdleBAE))
+Declaration(NamedIndividual(:obsSession3BAE))
+Declaration(NamedIndividual(:obsSession4SAE))
+Declaration(NamedIndividual(:obsStimulusWatchingBAE))
+Declaration(NamedIndividual(:obsTaggingTAE))
+Declaration(NamedIndividual(:partBaseStimulusWatchingBAE))
+Declaration(NamedIndividual(:partIdleBAE))
+Declaration(NamedIndividual(:partSession3BAE))
+Declaration(NamedIndividual(:partSession4SAE))
+Declaration(NamedIndividual(:partStimulusWatchingBAE))
+Declaration(NamedIndividual(:partTaggingTAE))
+Declaration(NamedIndividual(:recBaseStimulusWatchingBAE))
+Declaration(NamedIndividual(:recIdleBAE))
+Declaration(NamedIndividual(:recSession3BAE))
+Declaration(NamedIndividual(:recSession4SAE))
+Declaration(NamedIndividual(:recStimulusWatchingBAE))
+Declaration(NamedIndividual(:recTaggingTAE))
+Declaration(NamedIndividual(:seagullsFinalBS))
+Declaration(NamedIndividual(:session3BA))
+Declaration(NamedIndividual(:session3BAE))
+Declaration(NamedIndividual(:session4SA))
+Declaration(NamedIndividual(:session4SAE))
+Declaration(NamedIndividual(:stimulusWatchingBA))
+Declaration(NamedIndividual(:stimulusWatchingBAE))
+Declaration(NamedIndividual(:subject1))
+Declaration(NamedIndividual(:subject1PS))
+Declaration(NamedIndividual(:subject1PSApperance))
+Declaration(NamedIndividual(:taggingTA))
+Declaration(NamedIndividual(:taggingTAE))
+Declaration(NamedIndividual(:thePianistContext))
+Declaration(NamedIndividual(:thePianistS))
+Declaration(NamedIndividual(:ts1))
+Declaration(NamedIndividual(:ts2))
+Declaration(NamedIndividual(:ts3))
+Declaration(NamedIndividual(:ts4))
+Declaration(NamedIndividual(:ts5))
+Declaration(NamedIndividual(:ts6))
+
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :baseStimulusWatchingBA (:baseStimulusWatchingBA)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivity> :baseStimulusWatchingBA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#isPartOf> :baseStimulusWatchingBA :session3BA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#nextActivity> :baseStimulusWatchingBA :idleBA)
+
+# Individual: :baseStimulusWatchingBAE (:baseStimulusWatchingBAE)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivityExecution> :baseStimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :baseStimulusWatchingBAE :baseStimulusWatchingBA)
+
+# Individual: :ethnicity (:ethnicity)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#Property> :ethnicity)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasKey> :ethnicity "ethnicity"^^xsd:string)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasValue> :ethnicity "Caucasian"^^xsd:string)
+
+# Individual: :idleBA (:idleBA)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivity> :idleBA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#isPartOf> :idleBA :session3BA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#nextActivity> :idleBA :stimulusWatchingBA)
+
+# Individual: :idleBAE (:idleBAE)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivityExecution> :idleBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :idleBAE :idleBA)
+
+# Individual: :nationality (:nationality)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#Property> :nationality)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasKey> :nationality "nationality"^^xsd:string)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasValue> :nationality "Greek"^^xsd:string)
+
+# Individual: :obsBaseStimulusWatchingBAE (:obsBaseStimulusWatchingBAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsBaseStimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsBaseStimulusWatchingBAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsBaseStimulusWatchingBAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsBaseStimulusWatchingBAE :recBaseStimulusWatchingBAE)
+
+# Individual: :obsIdleBAE (:obsIdleBAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsIdleBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsIdleBAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsIdleBAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsIdleBAE :recIdleBAE)
+
+# Individual: :obsSession3BAE (:obsSession3BAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsSession3BAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsSession3BAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsSession3BAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsSession3BAE :recSession3BAE)
+
+# Individual: :obsSession4SAE (:obsSession4SAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsSession4SAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsSession4SAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsSession4SAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsSession4SAE :recSession4SAE)
+
+# Individual: :obsStimulusWatchingBAE (:obsStimulusWatchingBAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsStimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsStimulusWatchingBAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsStimulusWatchingBAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsStimulusWatchingBAE :recStimulusWatchingBAE)
+
+# Individual: :obsTaggingTAE (:obsTaggingTAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsTaggingTAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsTaggingTAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsTaggingTAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsTaggingTAE :recTaggingTAE)
+
+# Individual: :partBaseStimulusWatchingBAE (:partBaseStimulusWatchingBAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partBaseStimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partBaseStimulusWatchingBAE :baseStimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partBaseStimulusWatchingBAE :subject1PS)
+
+# Individual: :partIdleBAE (:partIdleBAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partIdleBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partIdleBAE :idleBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partIdleBAE :subject1PS)
+
+# Individual: :partSession3BAE (:partSession3BAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partSession3BAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partSession3BAE :session3BAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partSession3BAE :subject1PS)
+
+# Individual: :partSession4SAE (:partSession4SAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partSession4SAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partSession4SAE :session4SAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partSession4SAE :subject1PS)
+
+# Individual: :partStimulusWatchingBAE (:partStimulusWatchingBAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partStimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partStimulusWatchingBAE :stimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partStimulusWatchingBAE :subject1PS)
+
+# Individual: :partTaggingTAE (:partTaggingTAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partTaggingTAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partTaggingTAE :taggingTAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partTaggingTAE :subject1PS)
+
+# Individual: :recBaseStimulusWatchingBAE (:recBaseStimulusWatchingBAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recBaseStimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recBaseStimulusWatchingBAE :partBaseStimulusWatchingBAE)
+
+# Individual: :recIdleBAE (:recIdleBAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recIdleBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recIdleBAE :partIdleBAE)
+
+# Individual: :recSession3BAE (:recSession3BAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recSession3BAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recSession3BAE :partSession3BAE)
+
+# Individual: :recSession4SAE (:recSession4SAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recSession4SAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recSession4SAE :partSession4SAE)
+
+# Individual: :recStimulusWatchingBAE (:recStimulusWatchingBAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recStimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recStimulusWatchingBAE :partStimulusWatchingBAE)
+
+# Individual: :recTaggingTAE (:recTaggingTAE)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recTaggingTAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recTaggingTAE :partTaggingTAE)
+
+# Individual: :seagullsFinalBS (:seagullsFinalBS)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#Stimulus> :seagullsFinalBS)
+
+# Individual: :session3BA (:session3BA)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivity> :session3BA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#nextActivity> :session3BA :session4SA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasStimulus> :session3BA :seagullsFinalBS)
+
+# Individual: :session3BAE (:session3BAE)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivityExecution> :session3BAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :session3BAE :session3BA)
+
+# Individual: :session4SA (:session4SA)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#StimulatedActivity> :session4SA)
+
+# Individual: :session4SAE (:session4SAE)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#StimulatedActivityExecution> :session4SAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :session4SAE :session4SA)
+
+# Individual: :stimulusWatchingBA (:stimulusWatchingBA)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#StimulatedActivity> :stimulusWatchingBA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#isPartOf> :stimulusWatchingBA :session4SA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#nextActivity> :stimulusWatchingBA :taggingTA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasStimulus> :stimulusWatchingBA :thePianistS)
+
+# Individual: :stimulusWatchingBAE (:stimulusWatchingBAE)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#StimulatedActivityExecution> :stimulusWatchingBAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :stimulusWatchingBAE :stimulusWatchingBA)
+
+# Individual: :subject1 (:subject1)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participant> :subject1)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasSex> :subject1 <http://www.semanticweb.org/GRISERA/contextualOntology#sexMale>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasProperty> :subject1 :ethnicity)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasProperty> :subject1 :nationality)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#dateOfBirth> :subject1 "1978-12-07T00:00:00"^^xsd:dateTime)
+
+# Individual: :subject1PS (:subject1PS)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ParticipantState> :subject1PS)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasApperance> :subject1PS :subject1PSApperance)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipant> :subject1PS :subject1)
+
+# Individual: :subject1PSApperance (:subject1PSApperance)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#ApperanceOcclusionModel> :subject1PSApperance)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#hasBeardValue> :subject1PSApperance <http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#appearanceSome>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#hasMoustacheValue> :subject1PSApperance <http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#appearanceSome>)
+DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#hasGlasses> :subject1PSApperance "false"^^xsd:boolean)
+
+# Individual: :taggingTA (:taggingTA)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#TaggingActivity> :taggingTA)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#isPartOf> :taggingTA :session4SA)
+
+# Individual: :taggingTAE (:taggingTAE)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#TaggingActivityExecution> :taggingTAE)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :taggingTAE :taggingTA)
+
+# Individual: :thePianistContext (:thePianistContext)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#Context> :thePianistContext)
+ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasSourceDataset> :thePianistContext <http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#HHAD>)
+DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#clipEndTimestamp> :thePianistContext "3350004"^^xsd:unsignedLong)
+DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#clipStartTimestamp> :thePianistContext "3273003"^^xsd:unsignedLong)
+DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasDuration> :thePianistContext "77001"^^xsd:integer)
+DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasFilename> :thePianistContext "55.avi"^^xsd:string)
+
+# Individual: :thePianistS (:thePianistS)
+
+ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#Stimulus> :thePianistS)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasureName> :thePianistS <http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman#anger>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasureName> :thePianistS <http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman#sadness>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasContext> :thePianistS :thePianistContext)
+
+# Individual: :ts1 (:ts1)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts1)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts1 :obsBaseStimulusWatchingBAE)
+
+# Individual: :ts2 (:ts2)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts2)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts2 :obsIdleBAE)
+
+# Individual: :ts3 (:ts3)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts3)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts3 :obsSession3BAE)
+
+# Individual: :ts4 (:ts4)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts4)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts4 :obsSession4SAE)
+
+# Individual: :ts5 (:ts5)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts5)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts5 :obsStimulusWatchingBAE)
+
+# Individual: :ts6 (:ts6)
+
+ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts6)
+ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts6 :obsTaggingTAE)
+
+
+)
