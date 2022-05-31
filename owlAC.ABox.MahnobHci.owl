@@ -1,350 +1,639 @@
-Prefix(:=<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-246#>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-
-
-Ontology(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-246>
-Import(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion>)
-Import(<http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman>)
-Import(<http://www.semanticweb.org/teresa/ontologies/2021/10/untitled-ontology-176>)
-Import(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203>)
-
-Declaration(NamedIndividual(:baseStimulusWatchingBA))
-Declaration(NamedIndividual(:baseStimulusWatchingBAE))
-Declaration(NamedIndividual(:ethnicity))
-Declaration(NamedIndividual(:idleBA))
-Declaration(NamedIndividual(:idleBAE))
-Declaration(NamedIndividual(:nationality))
-Declaration(NamedIndividual(:obsBaseStimulusWatchingBAE))
-Declaration(NamedIndividual(:obsIdleBAE))
-Declaration(NamedIndividual(:obsSession3BAE))
-Declaration(NamedIndividual(:obsSession4SAE))
-Declaration(NamedIndividual(:obsStimulusWatchingBAE))
-Declaration(NamedIndividual(:obsTaggingTAE))
-Declaration(NamedIndividual(:partBaseStimulusWatchingBAE))
-Declaration(NamedIndividual(:partIdleBAE))
-Declaration(NamedIndividual(:partSession3BAE))
-Declaration(NamedIndividual(:partSession4SAE))
-Declaration(NamedIndividual(:partStimulusWatchingBAE))
-Declaration(NamedIndividual(:partTaggingTAE))
-Declaration(NamedIndividual(:recBaseStimulusWatchingBAE))
-Declaration(NamedIndividual(:recIdleBAE))
-Declaration(NamedIndividual(:recSession3BAE))
-Declaration(NamedIndividual(:recSession4SAE))
-Declaration(NamedIndividual(:recStimulusWatchingBAE))
-Declaration(NamedIndividual(:recTaggingTAE))
-Declaration(NamedIndividual(:resistanceMeasure))
-Declaration(NamedIndividual(:seagullsFinalBS))
-Declaration(NamedIndividual(:segullFinalContext))
-Declaration(NamedIndividual(:session3BA))
-Declaration(NamedIndividual(:session3BAE))
-Declaration(NamedIndividual(:session4SA))
-Declaration(NamedIndividual(:session4SAE))
-Declaration(NamedIndividual(:stimulusWatchingBA))
-Declaration(NamedIndividual(:stimulusWatchingBAE))
-Declaration(NamedIndividual(:subject1))
-Declaration(NamedIndividual(:subject1PS))
-Declaration(NamedIndividual(:subject1PSApperance))
-Declaration(NamedIndividual(:taggingTA))
-Declaration(NamedIndividual(:taggingTAE))
-Declaration(NamedIndividual(:thePianistContext))
-Declaration(NamedIndividual(:thePianistS))
-Declaration(NamedIndividual(:ts1))
-Declaration(NamedIndividual(:ts2))
-Declaration(NamedIndividual(:ts3))
-Declaration(NamedIndividual(:ts4))
-Declaration(NamedIndividual(:ts5))
-Declaration(NamedIndividual(:ts6))
-
-
-
-
-############################
-#   Named Individuals
-############################
-
-# Individual: :baseStimulusWatchingBA (:baseStimulusWatchingBA)
-
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivity> :baseStimulusWatchingBA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#isPartOf> :baseStimulusWatchingBA :session3BA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#nextActivity> :baseStimulusWatchingBA :idleBA)
-
-# Individual: :baseStimulusWatchingBAE (:baseStimulusWatchingBAE)
-
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivityExecution> :baseStimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :baseStimulusWatchingBAE :baseStimulusWatchingBA)
-
-# Individual: :ethnicity (:ethnicity)
-
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#Property> :ethnicity)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasKey> :ethnicity "ethnicity"^^xsd:string)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasValue> :ethnicity "Caucasian"^^xsd:string)
-
-# Individual: :idleBA (:idleBA)
-
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivity> :idleBA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#isPartOf> :idleBA :session3BA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#nextActivity> :idleBA :stimulusWatchingBA)
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY ssn "http://www.w3.org/ns/ssn/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY systems "http://www.w3.org/ns/ssn/systems/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY contextualOntology "http://www.semanticweb.org/GRISERA/contextualOntology#" >
+    <!ENTITY untitled-ontology-203 "http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#" >
+    <!ENTITY configurations "http://www.semanticweb.org/GRISERA/contextualOntology/configurations#" >
+    <!ENTITY propertyConcept "http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#" >
+    <!ENTITY appearanceOcclusion "http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-246#"
+     xml:base="http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-246"
+     xmlns:systems="&ssn;systems/"
+     xmlns:propertyConcept="http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#"
+     xmlns:untitled-ontology-203="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:appearanceOcclusion="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:contextualOntology="http://www.semanticweb.org/GRISERA/contextualOntology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:configurations="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci">
+        <owl:imports rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations/ssn"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/general"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBA">
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivity"/>
+        <contextualOntology:nextActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBA"/>
+        <contextualOntology:isPartOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBAE">
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivityExecution"/>
+        <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBA"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :idleBAE (:idleBAE)
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivityExecution> :idleBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :idleBAE :idleBA)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwo">
+        <rdf:type rdf:resource="&ssn;System"/>
+        <ssn:hasSubSystem rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodes"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :nationality (:nationality)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#Property> :nationality)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasKey> :nationality "nationality"^^xsd:string)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasValue> :nationality "Greek"^^xsd:string)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodes -->
 
-# Individual: :obsBaseStimulusWatchingBAE (:obsBaseStimulusWatchingBAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodes">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:comment xml:lang="en">Biosemi ActiveTwo electrodes.</rdfs:comment>
+        <systems:hasSystemCapability rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodesPlacementMahnobHCI"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsBaseStimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsBaseStimulusWatchingBAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsBaseStimulusWatchingBAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsBaseStimulusWatchingBAE :recBaseStimulusWatchingBAE)
 
-# Individual: :obsIdleBAE (:obsIdleBAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodesPlacementMahnobHCI -->
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsIdleBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsIdleBAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsIdleBAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsIdleBAE :recIdleBAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodesPlacementMahnobHCI">
+        <rdf:type rdf:resource="&ssn;systems/SystemCapability"/>
+        <rdfs:comment xml:lang="en">Electrodes placement on the distal phalanges of the middle and index fingers.</rdfs:comment>
+        <systems:inCondition rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI"/>
+        <systems:hasSystemProperty rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyElectrodesPlacementDistalMiddleIndex"/>
+        <systems:hasSystemProperty rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyGSRFullRange"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :obsSession3BAE (:obsSession3BAE)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsSession3BAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsSession3BAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsSession3BAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsSession3BAE :recSession3BAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI -->
 
-# Individual: :obsSession4SAE (:obsSession4SAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI">
+        <rdf:type rdf:resource="&configurations;InConfigurationCondition"/>
+        <rdf:type rdf:resource="&ssn;systems/Condition"/>
+        <rdfs:comment xml:lang="en">The configuration condition for Mahnob-HCI experiment.</rdfs:comment>
+        <configurations:isConfigurationConditionOf rdf:resource="&contextualOntology;channelEDA"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsSession4SAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsSession4SAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsSession4SAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsSession4SAE :recSession4SAE)
 
-# Individual: :obsStimulusWatchingBAE (:obsStimulusWatchingBAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationProperty250Hz -->
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsStimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsStimulusWatchingBAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsStimulusWatchingBAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsStimulusWatchingBAE :recStimulusWatchingBAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationProperty250Hz">
+        <rdf:type rdf:resource="&configurations;ConfigurationProperty"/>
+        <rdf:type rdf:resource="&ssn;systems/Frequency"/>
+        <rdfs:comment xml:lang="en">Sampling frequency of 250Hz.</rdfs:comment>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#frequenceMeasure250Hz"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :obsTaggingTAE (:obsTaggingTAE)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation> :obsTaggingTAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasLifeActivity> :obsTaggingTAE <http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasModality> :obsTaggingTAE <http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasRecording> :obsTaggingTAE :recTaggingTAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyElectrodesPlacementDistalMiddleIndex -->
 
-# Individual: :partBaseStimulusWatchingBAE (:partBaseStimulusWatchingBAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyElectrodesPlacementDistalMiddleIndex">
+        <rdf:type rdf:resource="&ssn;systems/SystemProperty"/>
+        <rdfs:comment xml:lang="en">The placement on the distal phalanges of the middle and index fingers.</rdfs:comment>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#placementMeasureDistalMiddleIndex"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partBaseStimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partBaseStimulusWatchingBAE :baseStimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partBaseStimulusWatchingBAE :subject1PS)
 
-# Individual: :partIdleBAE (:partIdleBAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyGSRFullRange -->
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partIdleBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partIdleBAE :idleBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partIdleBAE :subject1PS)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyGSRFullRange">
+        <rdf:type rdf:resource="&ssn;systems/MeasurementRange"/>
+        <rdfs:comment xml:lang="en">The full measurement range for GSR (Galvanic Skin Response).</rdfs:comment>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :partSession3BAE (:partSession3BAE)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partSession3BAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partSession3BAE :session3BAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partSession3BAE :subject1PS)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ethnicity -->
 
-# Individual: :partSession4SAE (:partSession4SAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ethnicity">
+        <rdf:type rdf:resource="&propertyConcept;Property"/>
+        <propertyConcept:hasValue rdf:datatype="&xsd;string">Caucasian</propertyConcept:hasValue>
+        <propertyConcept:hasKey rdf:datatype="&xsd;string">ethnicity</propertyConcept:hasKey>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partSession4SAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partSession4SAE :session4SAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partSession4SAE :subject1PS)
 
-# Individual: :partStimulusWatchingBAE (:partStimulusWatchingBAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#frequenceMeasure250Hz -->
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partStimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partStimulusWatchingBAE :stimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partStimulusWatchingBAE :subject1PS)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#frequenceMeasure250Hz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/general#GeneralSignalProcessingMeasure"/>
+        <contextualOntology:measureRange rdf:datatype="&xsd;string">250</contextualOntology:measureRange>
+        <contextualOntology:measureUnit rdf:datatype="&xsd;string">Hz</contextualOntology:measureUnit>
+        <rdfs:comment xml:lang="en">Biosemi activeTwo device</rdfs:comment>
+        <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/general#frequency"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :partTaggingTAE (:partTaggingTAE)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participation> :partTaggingTAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivityExecution> :partTaggingTAE :taggingTAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipantState> :partTaggingTAE :subject1PS)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure -->
 
-# Individual: :recBaseStimulusWatchingBAE (:recBaseStimulusWatchingBAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda#EDASignalProcessingMeasure"/>
+        <contextualOntology:measureRange rdf:datatype="&xsd;string">&lt;0,10000000&gt;</contextualOntology:measureRange>
+        <contextualOntology:measureUnit rdf:datatype="&xsd;string">Ohm</contextualOntology:measureUnit>
+        <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda#galvanicSkinResponseResistance"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recBaseStimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recBaseStimulusWatchingBAE :partBaseStimulusWatchingBAE)
 
-# Individual: :recIdleBAE (:recIdleBAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#genericDownsampler256Hz -->
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recIdleBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recIdleBAE :partIdleBAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#genericDownsampler256Hz">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <rdfs:comment xml:lang="en">A generic downsampler to 256Hz.</rdfs:comment>
+        <systems:hasSystemCapability rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#sampling256Hz"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :recSession3BAE (:recSession3BAE)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recSession3BAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recSession3BAE :partSession3BAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBA -->
 
-# Individual: :recSession4SAE (:recSession4SAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBA">
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivity"/>
+        <contextualOntology:isPartOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA"/>
+        <contextualOntology:nextActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBA"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recSession4SAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recSession4SAE :partSession4SAE)
 
-# Individual: :recStimulusWatchingBAE (:recStimulusWatchingBAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBAE -->
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recStimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recStimulusWatchingBAE :partStimulusWatchingBAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBAE">
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivityExecution"/>
+        <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBA"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :recTaggingTAE (:recTaggingTAE)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Recording> :recTaggingTAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipation> :recTaggingTAE :partTaggingTAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#nationality -->
 
-# Individual: :resistanceMeasure (:resistanceMeasure)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#nationality">
+        <rdf:type rdf:resource="&propertyConcept;Property"/>
+        <propertyConcept:hasValue rdf:datatype="&xsd;string">Greek</propertyConcept:hasValue>
+        <propertyConcept:hasKey rdf:datatype="&xsd;string">nationality</propertyConcept:hasKey>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2021/10/untitled-ontology-176#EDAMeasure> :resistanceMeasure)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasureName> :resistanceMeasure <http://www.semanticweb.org/teresa/ontologies/2021/10/untitled-ontology-176#resistance>)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#measureUnit> :resistanceMeasure "Ohm"^^xsd:string)
 
-# Individual: :seagullsFinalBS (:seagullsFinalBS)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsBaseStimulusWatchingBAE -->
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#Stimulus> :seagullsFinalBS)
-ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasContext> :seagullsFinalBS :segullFinalContext)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsBaseStimulusWatchingBAE">
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
+        <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recBaseStimulusWatchingBAE"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :segullFinalContext (:segullFinalContext)
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#Context> :segullFinalContext)
-DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasDuration> :segullFinalContext "16870"^^xsd:unsignedLong)
-DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasFilename> :segullFinalContext "seagulls_Final.avi"^^xsd:string)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsIdleBAE -->
 
-# Individual: :session3BA (:session3BA)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsIdleBAE">
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
+        <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recIdleBAE"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivity> :session3BA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#nextActivity> :session3BA :session4SA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasStimulus> :session3BA :seagullsFinalBS)
 
-# Individual: :session3BAE (:session3BAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession3BAE -->
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#BaselineActivityExecution> :session3BAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :session3BAE :session3BA)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession3BAE">
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
+        <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession3BAE"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :session4SA (:session4SA)
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#StimulatedActivity> :session4SA)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession4SAE -->
 
-# Individual: :session4SAE (:session4SAE)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession4SAE">
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
+        <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession4SAE"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#StimulatedActivityExecution> :session4SAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :session4SAE :session4SA)
 
-# Individual: :stimulusWatchingBA (:stimulusWatchingBA)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsStimulusWatchingBAE -->
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#StimulatedActivity> :stimulusWatchingBA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#isPartOf> :stimulusWatchingBA :session4SA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#nextActivity> :stimulusWatchingBA :taggingTA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasStimulus> :stimulusWatchingBA :thePianistS)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsStimulusWatchingBAE">
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
+        <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recStimulusWatchingBAE"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :stimulusWatchingBAE (:stimulusWatchingBAE)
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#StimulatedActivityExecution> :stimulusWatchingBAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :stimulusWatchingBAE :stimulusWatchingBA)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsTaggingTAE -->
 
-# Individual: :subject1 (:subject1)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsTaggingTAE">
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
+        <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recTaggingTAE"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#Participant> :subject1)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasSex> :subject1 <http://www.semanticweb.org/GRISERA/contextualOntology#sexMale>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasProperty> :subject1 :ethnicity)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#hasProperty> :subject1 :nationality)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#dateOfBirth> :subject1 "1978-12-07T00:00:00"^^xsd:dateTime)
 
-# Individual: :subject1PS (:subject1PS)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partBaseStimulusWatchingBAE -->
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#ParticipantState> :subject1PS)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasApperance> :subject1PS :subject1PSApperance)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasParticipant> :subject1PS :subject1)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partBaseStimulusWatchingBAE">
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
+        <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBAE"/>
+        <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :subject1PSApperance (:subject1PSApperance)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#ApperanceOcclusionModel> :subject1PSApperance)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#hasBeardValue> :subject1PSApperance <http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#appearanceSome>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#hasMoustacheValue> :subject1PSApperance <http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#appearanceSome>)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#hasGlasses> :subject1PSApperance "false"^^xsd:boolean)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partIdleBAE -->
 
-# Individual: :taggingTA (:taggingTA)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partIdleBAE">
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
+        <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBAE"/>
+        <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#TaggingActivity> :taggingTA)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#isPartOf> :taggingTA :session4SA)
 
-# Individual: :taggingTAE (:taggingTAE)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession3BAE -->
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#TaggingActivityExecution> :taggingTAE)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity> :taggingTAE :taggingTA)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession3BAE">
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
+        <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BAE"/>
+        <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :thePianistContext (:thePianistContext)
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#Context> :thePianistContext)
-ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasSourceDataset> :thePianistContext <http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#HHAD>)
-DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#clipEndTimestamp> :thePianistContext "3350004"^^xsd:unsignedLong)
-DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#clipStartTimestamp> :thePianistContext "3273003"^^xsd:unsignedLong)
-DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasDuration> :thePianistContext "77001"^^xsd:integer)
-DataPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasFilename> :thePianistContext "55.avi"^^xsd:string)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession4SAE -->
 
-# Individual: :thePianistS (:thePianistS)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession4SAE">
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
+        <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SAE"/>
+        <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#Stimulus> :thePianistS)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasureName> :thePianistS <http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman#anger>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasureName> :thePianistS <http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman#sadness>)
-ObjectPropertyAssertion(<http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-203#hasContext> :thePianistS :thePianistContext)
 
-# Individual: :ts1 (:ts1)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partStimulusWatchingBAE -->
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts1)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts1 :resistanceMeasure)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts1 :obsBaseStimulusWatchingBAE)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts1 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts1.csv"^^xsd:string)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partStimulusWatchingBAE">
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
+        <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBAE"/>
+        <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :ts2 (:ts2)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts2)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts2 :resistanceMeasure)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts2 :obsIdleBAE)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts2 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts2.csv"^^xsd:string)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partTaggingTAE -->
 
-# Individual: :ts3 (:ts3)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partTaggingTAE">
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
+        <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
+        <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTAE"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts3)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts3 :resistanceMeasure)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts3 :obsSession3BAE)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts3 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts3.csv"^^xsd:string)
 
-# Individual: :ts4 (:ts4)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#placementMeasureDistalMiddleIndex -->
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts4)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts4 :resistanceMeasure)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts4 :obsSession4SAE)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts4 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts4.csv"^^xsd:string)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#placementMeasureDistalMiddleIndex">
+        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda#EDADeviceDependentMeasure"/>
+        <contextualOntology:measureDatatype rdf:datatype="&xsd;string"> http://www.w3.org/2001/XMLSchema/string</contextualOntology:measureDatatype>
+        <rdfs:comment xml:lang="en">The placement on the distal phalanges of the middle and index fingers.</rdfs:comment>
+        <contextualOntology:measureRange>distal phalanges of the middle and index fingers</contextualOntology:measureRange>
+        <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda#edaElectrodesPlacement"/>
+    </owl:NamedIndividual>
+    
 
-# Individual: :ts5 (:ts5)
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts5)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts5 :resistanceMeasure)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts5 :obsStimulusWatchingBAE)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts5 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts5.csv"^^xsd:string)
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recBaseStimulusWatchingBAE -->
 
-# Individual: :ts6 (:ts6)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recBaseStimulusWatchingBAE">
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
+        <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partBaseStimulusWatchingBAE"/>
+    </owl:NamedIndividual>
+    
 
-ClassAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries> :ts6)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasMeasure> :ts6 :resistanceMeasure)
-ObjectPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#hasObservableInformation> :ts6 :obsTaggingTAE)
-DataPropertyAssertion(<http://www.semanticweb.org/GRISERA/contextualOntology#timeSeriesSource> :ts6 "https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts6.csv"^^xsd:string)
 
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recIdleBAE -->
 
-)
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recIdleBAE">
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
+        <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partIdleBAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession3BAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession3BAE">
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
+        <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession3BAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession4SAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession4SAE">
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
+        <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession4SAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recStimulusWatchingBAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recStimulusWatchingBAE">
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
+        <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partStimulusWatchingBAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recTaggingTAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recTaggingTAE">
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
+        <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partTaggingTAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#sampling256Hz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#sampling256Hz">
+        <rdf:type rdf:resource="&ssn;systems/SystemCapability"/>
+        <rdfs:comment xml:lang="en">Sampling rate of 256Hz.</rdfs:comment>
+        <systems:inCondition rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI"/>
+        <systems:hasSystemProperty rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationProperty250Hz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#seagullsFinalBS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#seagullsFinalBS">
+        <rdf:type rdf:resource="&untitled-ontology-203;Stimulus"/>
+        <untitled-ontology-203:hasContext rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#segullFinalContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#segullFinalContext -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#segullFinalContext">
+        <rdf:type rdf:resource="&untitled-ontology-203;Context"/>
+        <untitled-ontology-203:hasDuration rdf:datatype="&xsd;unsignedLong">16870</untitled-ontology-203:hasDuration>
+        <untitled-ontology-203:hasFilename rdf:datatype="&xsd;string">seagulls_Final.avi</untitled-ontology-203:hasFilename>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA">
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivity"/>
+        <untitled-ontology-203:hasStimulus rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#seagullsFinalBS"/>
+        <contextualOntology:nextActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BAE">
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivityExecution"/>
+        <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA">
+        <rdf:type rdf:resource="&untitled-ontology-203;StimulatedActivity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SAE">
+        <rdf:type rdf:resource="&untitled-ontology-203;StimulatedActivityExecution"/>
+        <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBA">
+        <rdf:type rdf:resource="&untitled-ontology-203;StimulatedActivity"/>
+        <contextualOntology:isPartOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA"/>
+        <contextualOntology:nextActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTA"/>
+        <untitled-ontology-203:hasStimulus rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBAE">
+        <rdf:type rdf:resource="&untitled-ontology-203;StimulatedActivityExecution"/>
+        <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1">
+        <rdf:type rdf:resource="&contextualOntology;Participant"/>
+        <contextualOntology:dateOfBirth rdf:datatype="&xsd;dateTime">1978-12-07T00:00:00</contextualOntology:dateOfBirth>
+        <contextualOntology:hasSex rdf:resource="&contextualOntology;sexMale"/>
+        <propertyConcept:hasProperty rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ethnicity"/>
+        <propertyConcept:hasProperty rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#nationality"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS">
+        <rdf:type rdf:resource="&contextualOntology;ParticipantState"/>
+        <contextualOntology:hasParticipant rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1"/>
+        <contextualOntology:hasApperance rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PSApperance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PSApperance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PSApperance">
+        <rdf:type rdf:resource="&appearanceOcclusion;ApperanceOcclusionModel"/>
+        <appearanceOcclusion:hasGlasses rdf:datatype="&xsd;boolean">false</appearanceOcclusion:hasGlasses>
+        <appearanceOcclusion:hasMoustacheValue rdf:resource="&appearanceOcclusion;appearanceSome"/>
+        <appearanceOcclusion:hasBeardValue rdf:resource="&appearanceOcclusion;appearanceSome"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTA">
+        <rdf:type rdf:resource="&untitled-ontology-203;TaggingActivity"/>
+        <contextualOntology:isPartOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTAE">
+        <rdf:type rdf:resource="&untitled-ontology-203;TaggingActivityExecution"/>
+        <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistContext -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistContext">
+        <rdf:type rdf:resource="&untitled-ontology-203;Context"/>
+        <untitled-ontology-203:clipStartTimestamp rdf:datatype="&xsd;unsignedLong">3273003</untitled-ontology-203:clipStartTimestamp>
+        <untitled-ontology-203:clipEndTimestamp rdf:datatype="&xsd;unsignedLong">3350004</untitled-ontology-203:clipEndTimestamp>
+        <untitled-ontology-203:hasFilename rdf:datatype="&xsd;string">55.avi</untitled-ontology-203:hasFilename>
+        <untitled-ontology-203:hasDuration rdf:datatype="&xsd;integer">77001</untitled-ontology-203:hasDuration>
+        <untitled-ontology-203:hasSourceDataset rdf:resource="&untitled-ontology-203;HHAD"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistS">
+        <rdf:type rdf:resource="&untitled-ontology-203;Stimulus"/>
+        <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman#anger"/>
+        <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman#sadness"/>
+        <untitled-ontology-203:hasContext rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistContext"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts1">
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts1.csv</contextualOntology:timeSeriesSource>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
+        <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsBaseStimulusWatchingBAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts2">
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts2.csv</contextualOntology:timeSeriesSource>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
+        <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsIdleBAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts3">
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts3.csv</contextualOntology:timeSeriesSource>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
+        <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession3BAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts4">
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts4.csv</contextualOntology:timeSeriesSource>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
+        <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession4SAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts5">
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts5.csv</contextualOntology:timeSeriesSource>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
+        <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsStimulusWatchingBAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts6">
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts6.csv</contextualOntology:timeSeriesSource>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
+        <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsTaggingTAE"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
