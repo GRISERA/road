@@ -233,9 +233,6 @@
         <ObjectProperty IRI="#isScenarioOf"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#nextActivity"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#nextActivityExecution"/>
     </Declaration>
     <Declaration>
@@ -423,6 +420,15 @@
             <Class IRI="#PersonalGroupArrangement"/>
             <Class IRI="#PersonalTwoPersonsArrangement"/>
         </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Handedness"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#handednessAmbidexterity"/>
+            <NamedIndividual IRI="#handednessLeft"/>
+            <NamedIndividual IRI="#handednessMixed"/>
+            <NamedIndividual IRI="#handednessRight"/>
+        </ObjectOneOf>
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Activity"/>
@@ -946,10 +952,6 @@
         <ObjectProperty IRI="#isScenarioOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isNextOfActivity"/>
-        <ObjectProperty IRI="#nextActivity"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
         <ObjectProperty IRI="#isNextOfActivityExecution"/>
         <ObjectProperty IRI="#nextActivityExecution"/>
     </InverseObjectProperties>
@@ -1096,10 +1098,6 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#nextActivity"/>
-        <Class IRI="#Activity"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#nextActivityExecution"/>
         <Class IRI="#ActivityExecution"/>
     </ObjectPropertyDomain>
@@ -1197,10 +1195,6 @@
             <Class IRI="#Activity"/>
             <Class IRI="#ActivityExecution"/>
         </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#nextActivity"/>
-        <Class IRI="#Activity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#nextActivityExecution"/>
@@ -1667,7 +1661,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#handednessLeft</IRI>
-        <Literal xml:lang="en">An individual representing that the person is right-handed.</Literal>
+        <Literal xml:lang="en">An individual representing that the person is left-handed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1677,7 +1671,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#handednessRight</IRI>
-        <Literal xml:lang="en">An individual representing that the person is left-handed.</Literal>
+        <Literal xml:lang="en">An individual representing that the person is right-handed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1943,11 +1937,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#name</IRI>
         <Literal xml:lang="en">A data property allowing to define a name of a specific entity.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#nextActivity</IRI>
-        <Literal xml:lang="en">An object property allowing to define a sequence of activities in a scenario.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
