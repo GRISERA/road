@@ -140,6 +140,12 @@
         <Class IRI="#SignalProcessingMeasureName"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#TaggingActivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TaggingActivityExecution"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#TimeSeries"/>
     </Declaration>
     <Declaration>
@@ -219,9 +225,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isHanded"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isNextOfActivity"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isNextOfActivityExecution"/>
@@ -667,6 +670,14 @@
     <SubClassOf>
         <Class IRI="#SignalProcessingMeasureName"/>
         <Class IRI="#MeasureName"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TaggingActivity"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TaggingActivityExecution"/>
+        <Class IRI="#ActivityExecution"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TimeSeries"/>
@@ -1560,6 +1571,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TaggingActivity</IRI>
+        <Literal xml:lang="en">A pattern of an activity done within an experiment. This pattern describes a tagging activity of participants. During this activity pattern participants asses their emotional state.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TaggingActivityExecution</IRI>
+        <Literal xml:lang="en">An execution of a specific tagging activity described by a tagging activity pattern.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#TimeSeries</IRI>
         <Literal xml:lang="en">Time series for a specific measure.</Literal>
     </AnnotationAssertion>
@@ -1782,11 +1803,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#isHanded</IRI>
         <Literal xml:lang="en">An object property allowing to define handednes of a participant.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#isNextOfActivity</IRI>
-        <Literal xml:lang="en">An inverse of the object property nextActivity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

@@ -36,12 +36,6 @@
         <Class IRI="#StimulatedActivityExecution"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#TaggingActivity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#TaggingActivityExecution"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#emotionStimulated"/>
     </Declaration>
     <Declaration>
@@ -137,36 +131,21 @@
             <Class IRI="#StimulatedActivity"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TaggingActivity"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#Activity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TaggingActivityExecution"/>
-        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#ActivityExecution"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#TaggingActivityExecution"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://www.semanticweb.org/GRISERA/contextualOntology#hasActivity"/>
-            <Class IRI="#TaggingActivity"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
     <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#TaggingActivity"/>
         <Class IRI="#BaselineActivity"/>
-        <Class IRI="#TaggingActivity"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#BaselineActivityExecution"/>
-        <Class IRI="#TaggingActivityExecution"/>
-    </DisjointClasses>
-    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#TaggingActivity"/>
         <Class IRI="#StimulatedActivity"/>
-        <Class IRI="#TaggingActivity"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#TaggingActivityExecution"/>
+        <Class IRI="#BaselineActivityExecution"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.semanticweb.org/GRISERA/contextualOntology#TaggingActivityExecution"/>
         <Class IRI="#StimulatedActivityExecution"/>
-        <Class IRI="#TaggingActivityExecution"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#AffectiveMultimediaDatabase"/>
@@ -363,16 +342,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#StimulatedActivityExecution</IRI>
         <Literal xml:lang="en">An execution of a specific stimulated activity described by a stimulated activity pattern.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#TaggingActivity</IRI>
-        <Literal xml:lang="en">A pattern of an activity done within an experiment. This pattern describes a tagging activity of participants. During this activity pattern participants asses their emotional state.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#TaggingActivityExecution</IRI>
-        <Literal xml:lang="en">An execution of a specific tagging activity described by a tagging activity pattern.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
