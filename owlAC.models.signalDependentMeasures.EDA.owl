@@ -1,22 +1,12 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE Ontology [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda">
-    <Prefix name="" IRI="http://www.semanticweb.org/teresa/ontologies/2021/10/untitled-ontology-176"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -37,6 +27,15 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#edaElectrodesPlacement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#galvanicSkinAdmittance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#galvanicSkinImpedance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#galvanicSkinPotential"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#galvanicSkinResponseElectricalConductance"/>
@@ -69,6 +68,18 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#EDASignalDependentMeasureName"/>
+        <NamedIndividual IRI="#galvanicSkinAdmittance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EDASignalDependentMeasureName"/>
+        <NamedIndividual IRI="#galvanicSkinImpedance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EDASignalDependentMeasureName"/>
+        <NamedIndividual IRI="#galvanicSkinPotential"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EDASignalDependentMeasureName"/>
         <NamedIndividual IRI="#galvanicSkinResponseElectricalConductance"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -82,46 +93,46 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#EDADeviceDependentMeasure</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A list of device-depedent measure for signals obtained from electrodermal activity (EDA)</Literal>
+        <Literal xml:lang="en">A list of device-depedent measure for signals obtained from electrodermal activity (EDA)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#EDADeviceDependentMeasureName</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A list of device-depedent measure names for signals obtained from electrodermal activity (EDA).</Literal>
+        <Literal xml:lang="en">A list of device-depedent measure names for signals obtained from electrodermal activity (EDA).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#EDASignalDependentMeasureName</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A list of measure names for signals obtained from electrodermal activity (EDA).</Literal>
+        <Literal xml:lang="en">A list of measure names for signals obtained from electrodermal activity (EDA).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#EDASignalProcessingMeasure</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A list of measure names for signals obtained from electrodermal activity (EDA).</Literal>
+        <Literal xml:lang="en">A list of measure names for signals obtained from electrodermal activity (EDA).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#edaElectrodesPlacement</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Placement for electrodes for measuring eda.</Literal>
+        <Literal xml:lang="en">Placement for electrodes for measuring eda.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#galvanicSkinResponseElectricalConductance</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The individual representing measure name for galvanic skin response measured by electrical conductance, showing how easily electricity flows through electrical components for a given voltage difference.</Literal>
+        <Literal xml:lang="en">The individual representing measure name for galvanic skin response measured by electrical conductance, showing how easily electricity flows through electrical components for a given voltage difference.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#galvanicSkinResponseResistance</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The individual representing measure name for galvanic skin response measured by resistance being the opposition to current flow in an electrical circuit.</Literal>
+        <Literal xml:lang="en">The individual representing measure name for galvanic skin response measured by resistance being the opposition to current flow in an electrical circuit.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#galvanicSkinResponseVoltage</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The individual representing measure name for galvanic skin response measured by voltage, which is an electromotive force or potential difference expressed in volts.</Literal>
+        <Literal xml:lang="en">The individual representing measure name for galvanic skin response measured by voltage, which is an electromotive force or potential difference expressed in volts.</Literal>
     </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
