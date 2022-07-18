@@ -63,6 +63,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/configurations#madeIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#madeIn">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Actuation"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfiguredActuation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -98,6 +107,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Actuation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Actuation">
+        <rdfs:comment xml:lang="en">A specific actuation made during an experiment.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Configuration -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Configuration">
@@ -130,6 +147,33 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfigurationSource">
         <rdfs:comment xml:lang="en">Objects that can be a source of configuration for execution of an experiment or a part of an experiment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfiguredActuation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfiguredActuation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Configuration"/>
+        <rdfs:comment xml:lang="en">Describes an element of configuration related to specific actuation made during an experiment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfiguredOperatingRange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfiguredOperatingRange">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Configuration"/>
+        <rdfs:comment xml:lang="en">Describes an element of configuration related to specific operating range exhibited during an experiment.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfiguredSystemCapability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfiguredSystemCapability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Configuration"/>
+        <rdfs:comment xml:lang="en">Describes an element of configuration related to specific system capabilities exposed during an experiment.</rdfs:comment>
     </owl:Class>
     
 

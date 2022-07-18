@@ -60,28 +60,18 @@
     
 
 
-    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/configurations/ssn#ConfiguredOperatingRange -->
+    <!-- http://www.w3.org/ns/sosa/Actuation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/GRISERA/contextualOntology/configurations/ssn#ConfiguredOperatingRange">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Configuration"/>
-        <rdfs:comment xml:lang="en">Describes an element of ROAD configuration, which is described as SSN operating range.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/configurations/ssn#ConfiguredSystemCapability -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/GRISERA/contextualOntology/configurations/ssn#ConfiguredSystemCapability">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Configuration"/>
-        <rdfs:comment xml:lang="en">Describes an element of ROAD configuration, which is described as SSN system capability.</rdfs:comment>
-    </owl:Class>
+    <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#Actuation"/>
+    </rdf:Description>
     
 
 
     <!-- http://www.w3.org/ns/ssn/systems/OperatingRange -->
 
     <rdf:Description rdf:about="http://www.w3.org/ns/ssn/systems/OperatingRange">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations/ssn#ConfiguredOperatingRange"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfiguredOperatingRange"/>
     </rdf:Description>
     
 
@@ -89,7 +79,7 @@
     <!-- http://www.w3.org/ns/ssn/systems/SystemCapability -->
 
     <rdf:Description rdf:about="http://www.w3.org/ns/ssn/systems/SystemCapability">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations/ssn#ConfiguredSystemCapability"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfiguredSystemCapability"/>
     </rdf:Description>
 </rdf:RDF>
 

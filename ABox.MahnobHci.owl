@@ -1,23 +1,46 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY ssn "http://www.w3.org/ns/ssn/" >
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY sosa "http://www.w3.org/ns/sosa/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY systems "http://www.w3.org/ns/ssn/systems/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY contextualOntology "http://www.semanticweb.org/GRISERA/contextualOntology#" >
+    <!ENTITY untitled-ontology-203 "http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#" >
+    <!ENTITY configurations "http://www.semanticweb.org/GRISERA/contextualOntology/configurations#" >
+    <!ENTITY propertyConcept "http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#" >
+    <!ENTITY appearanceOcclusion "http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#" >
+]>
+
+
 <rdf:RDF xmlns="http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-246#"
      xml:base="http://www.semanticweb.org/teresa/ontologies/2022/4/untitled-ontology-246"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ssn="http://www.w3.org/ns/ssn/"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/"
-     xmlns:systems="http://www.w3.org/ns/ssn/systems/"
-     xmlns:configurations="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#"
+     xmlns:systems="&ssn;systems/"
      xmlns:propertyConcept="http://www.semanticweb.org/GRISERA/contextualOntology/propertyConcept#"
-     xmlns:contextualOntology="http://www.semanticweb.org/GRISERA/contextualOntology#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:untitled-ontology-203="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
      xmlns:appearanceOcclusion="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#"
-     xmlns:untitled-ontology-203="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#">
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:schema="http://schema.org/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:contextualOntology="http://www.semanticweb.org/GRISERA/contextualOntology#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:configurations="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci">
         <owl:imports rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations/ssn"/>
@@ -27,6 +50,52 @@
         <owl:imports rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman"/>
         <owl:imports rdf:resource="http://www.semanticweb.org/teresa/ontologies/2022/5/untitled-ontology-272"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/contextualOntology#nextActivity -->
+
+    <owl:AnnotationProperty rdf:about="&contextualOntology;nextActivity"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#Stimulus -->
+
+    <owl:Class rdf:about="&untitled-ontology-203;Stimulus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#TaggingActivity -->
+
+    <owl:Class rdf:about="&untitled-ontology-203;TaggingActivity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#TaggingActivityExecution -->
+
+    <owl:Class rdf:about="&untitled-ontology-203;TaggingActivityExecution"/>
     
 
 
@@ -44,9 +113,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#BaselineActivity"/>
-        <contextualOntology:isPartOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivity"/>
         <contextualOntology:nextActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBA"/>
+        <contextualOntology:isPartOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA"/>
     </owl:NamedIndividual>
     
 
@@ -54,7 +123,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#BaselineActivityExecution"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivityExecution"/>
         <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBA"/>
     </owl:NamedIndividual>
     
@@ -63,7 +132,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwo -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwo">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <rdf:type rdf:resource="&ssn;System"/>
         <ssn:hasSubSystem rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodes"/>
     </owl:NamedIndividual>
     
@@ -72,9 +141,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodes -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodes">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <systems:hasSystemCapability rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodesPlacementMahnobHCI"/>
+        <rdf:type rdf:resource="&sosa;Sensor"/>
         <rdfs:comment xml:lang="en">Biosemi ActiveTwo electrodes.</rdfs:comment>
+        <systems:hasSystemCapability rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodesPlacementMahnobHCI"/>
     </owl:NamedIndividual>
     
 
@@ -82,11 +151,11 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodesPlacementMahnobHCI -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#biosemiActiveTwoElectrodesPlacementMahnobHCI">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
+        <rdf:type rdf:resource="&ssn;systems/SystemCapability"/>
+        <rdfs:comment xml:lang="en">Electrodes placement on the distal phalanges of the middle and index fingers.</rdfs:comment>
+        <systems:inCondition rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI"/>
         <systems:hasSystemProperty rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyElectrodesPlacementDistalMiddleIndex"/>
         <systems:hasSystemProperty rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyGSRFullRange"/>
-        <systems:inCondition rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI"/>
-        <rdfs:comment xml:lang="en">Electrodes placement on the distal phalanges of the middle and index fingers.</rdfs:comment>
     </owl:NamedIndividual>
     
 
@@ -94,21 +163,41 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#InConfigurationCondition"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Condition"/>
-        <configurations:isConfigurationConditionOf rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#channelEDA"/>
-        <rdfs:comment xml:lang="en">The configuration condition for Mahnob-HCI experiment.</rdfs:comment>
+        <rdf:type rdf:resource="&configurations;InConfigurationCondition"/>
+        <rdf:type rdf:resource="&ssn;systems/Condition"/>
+        <rdfs:comment xml:lang="en">The configuration condition for Mahnob-HCI experiment for the whole EDA channel.</rdfs:comment>
+        <configurations:isConfigurationConditionOf rdf:resource="&contextualOntology;channelEDA"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationProperty250Hz -->
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionSession3BAE -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationProperty250Hz">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/configurations#ConfigurationProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/Frequency"/>
-        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#frequenceMeasure250Hz"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionSession3BAE">
+        <rdf:type rdf:resource="&configurations;InConfigurationCondition"/>
+        <rdfs:comment xml:lang="en">The configuration condition for Session 3.</rdfs:comment>
+        <configurations:isConfigurationConditionOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession3BAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionSession4SAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionSession4SAE">
+        <rdf:type rdf:resource="&configurations;InConfigurationCondition"/>
+        <rdfs:comment xml:lang="en">The configuration condition for Session 4.</rdfs:comment>
+        <configurations:isConfigurationConditionOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession4SAE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationProperty256Hz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationProperty256Hz">
+        <rdf:type rdf:resource="&configurations;ConfigurationProperty"/>
+        <rdf:type rdf:resource="&ssn;systems/Frequency"/>
         <rdfs:comment xml:lang="en">Sampling frequency of 250Hz.</rdfs:comment>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#frequenceMeasure256Hz"/>
     </owl:NamedIndividual>
     
 
@@ -116,9 +205,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyElectrodesPlacementDistalMiddleIndex -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyElectrodesPlacementDistalMiddleIndex">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SystemProperty"/>
-        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#placementMeasureDistalMiddleIndex"/>
+        <rdf:type rdf:resource="&ssn;systems/SystemProperty"/>
         <rdfs:comment xml:lang="en">The placement on the distal phalanges of the middle and index fingers.</rdfs:comment>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#placementMeasureDistalMiddleIndex"/>
     </owl:NamedIndividual>
     
 
@@ -126,21 +215,21 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyGSRFullRange -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationPropertyGSRFullRange">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/MeasurementRange"/>
-        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
+        <rdf:type rdf:resource="&ssn;systems/MeasurementRange"/>
         <rdfs:comment xml:lang="en">The full measurement range for GSR (Galvanic Skin Response).</rdfs:comment>
+        <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#frequenceMeasure250Hz -->
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#frequenceMeasure256Hz -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#frequenceMeasure250Hz">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#frequenceMeasure256Hz">
         <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/general#GeneralSignalProcessingMeasure"/>
-        <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/general#frequency"/>
-        <contextualOntology:measureRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">250</contextualOntology:measureRange>
-        <contextualOntology:measureUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hz</contextualOntology:measureUnit>
+        <contextualOntology:measureRange rdf:datatype="&xsd;string">250</contextualOntology:measureRange>
+        <contextualOntology:measureUnit rdf:datatype="&xsd;string">Hz</contextualOntology:measureUnit>
         <rdfs:comment xml:lang="en">Biosemi activeTwo device</rdfs:comment>
+        <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/general#frequency"/>
     </owl:NamedIndividual>
     
 
@@ -149,9 +238,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure">
         <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda#EDASignalProcessingMeasure"/>
+        <contextualOntology:measureRange rdf:datatype="&xsd;string">&lt;0,10000000&gt;</contextualOntology:measureRange>
+        <contextualOntology:measureUnit rdf:datatype="&xsd;string">Ohm</contextualOntology:measureUnit>
         <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda#galvanicSkinResponseResistance"/>
-        <contextualOntology:measureRange rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;0,10000000&gt;</contextualOntology:measureRange>
-        <contextualOntology:measureUnit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ohm</contextualOntology:measureUnit>
     </owl:NamedIndividual>
     
 
@@ -159,9 +248,20 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#genericDownsampler256Hz -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#genericDownsampler256Hz">
-        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
-        <systems:hasSystemCapability rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#sampling256Hz"/>
+        <rdf:type rdf:resource="&sosa;Sampler"/>
         <rdfs:comment xml:lang="en">A generic downsampler to 256Hz.</rdfs:comment>
+        <systems:hasSystemCapability rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#sampling256Hz"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#genericProjector -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#genericProjector">
+        <rdf:type rdf:resource="&sosa;Actuator"/>
+        <rdfs:comment xml:lang="en">A generic video projector used for displaying videos.</rdfs:comment>
+        <sosa:madeActuation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#seagullsFinalBS"/>
+        <sosa:madeActuation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistS"/>
     </owl:NamedIndividual>
     
 
@@ -169,7 +269,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#BaselineActivity"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivity"/>
         <contextualOntology:isPartOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA"/>
         <contextualOntology:nextActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBA"/>
     </owl:NamedIndividual>
@@ -179,7 +279,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#BaselineActivityExecution"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivityExecution"/>
         <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBA"/>
     </owl:NamedIndividual>
     
@@ -188,9 +288,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsBaseStimulusWatchingBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsBaseStimulusWatchingBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation"/>
-        <contextualOntology:hasLifeActivity rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration"/>
-        <contextualOntology:hasModality rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance"/>
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
         <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recBaseStimulusWatchingBAE"/>
     </owl:NamedIndividual>
     
@@ -199,9 +299,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsIdleBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsIdleBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation"/>
-        <contextualOntology:hasLifeActivity rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration"/>
-        <contextualOntology:hasModality rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance"/>
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
         <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recIdleBAE"/>
     </owl:NamedIndividual>
     
@@ -210,9 +310,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession3BAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession3BAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation"/>
-        <contextualOntology:hasLifeActivity rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration"/>
-        <contextualOntology:hasModality rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance"/>
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
         <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession3BAE"/>
     </owl:NamedIndividual>
     
@@ -221,9 +321,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession4SAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession4SAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation"/>
-        <contextualOntology:hasLifeActivity rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration"/>
-        <contextualOntology:hasModality rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance"/>
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
         <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession4SAE"/>
     </owl:NamedIndividual>
     
@@ -232,9 +332,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsStimulusWatchingBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsStimulusWatchingBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation"/>
-        <contextualOntology:hasLifeActivity rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration"/>
-        <contextualOntology:hasModality rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance"/>
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
         <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recStimulusWatchingBAE"/>
     </owl:NamedIndividual>
     
@@ -243,9 +343,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsTaggingTAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsTaggingTAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#ObservableInformation"/>
-        <contextualOntology:hasLifeActivity rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#lifeActivityPerspiration"/>
-        <contextualOntology:hasModality rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#modalitySkinConductance"/>
+        <rdf:type rdf:resource="&contextualOntology;ObservableInformation"/>
+        <contextualOntology:hasLifeActivity rdf:resource="&contextualOntology;lifeActivityPerspiration"/>
+        <contextualOntology:hasModality rdf:resource="&contextualOntology;modalitySkinConductance"/>
         <contextualOntology:hasRecording rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recTaggingTAE"/>
     </owl:NamedIndividual>
     
@@ -254,7 +354,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partBaseStimulusWatchingBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partBaseStimulusWatchingBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Participation"/>
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
         <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#baseStimulusWatchingBAE"/>
         <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
     </owl:NamedIndividual>
@@ -264,7 +364,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partIdleBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partIdleBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Participation"/>
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
         <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#idleBAE"/>
         <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
     </owl:NamedIndividual>
@@ -274,7 +374,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession3BAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession3BAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Participation"/>
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
         <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BAE"/>
         <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
     </owl:NamedIndividual>
@@ -284,7 +384,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession4SAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession4SAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Participation"/>
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
         <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SAE"/>
         <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
     </owl:NamedIndividual>
@@ -294,7 +394,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partStimulusWatchingBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partStimulusWatchingBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Participation"/>
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
         <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBAE"/>
         <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
     </owl:NamedIndividual>
@@ -304,9 +404,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#partTaggingTAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partTaggingTAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Participation"/>
-        <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTAE"/>
+        <rdf:type rdf:resource="&contextualOntology;Participation"/>
         <contextualOntology:hasParticipantState rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS"/>
+        <contextualOntology:hasActivityExecution rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTAE"/>
     </owl:NamedIndividual>
     
 
@@ -315,10 +415,32 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#placementMeasureDistalMiddleIndex">
         <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda#EDADeviceDependentMeasure"/>
-        <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda#edaElectrodesPlacement"/>
-        <contextualOntology:measureDatatype rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> http://www.w3.org/2001/XMLSchema/string</contextualOntology:measureDatatype>
-        <contextualOntology:measureRange>distal phalanges of the middle and index fingers</contextualOntology:measureRange>
+        <contextualOntology:measureDatatype rdf:datatype="&xsd;string"> http://www.w3.org/2001/XMLSchema/string</contextualOntology:measureDatatype>
         <rdfs:comment xml:lang="en">The placement on the distal phalanges of the middle and index fingers.</rdfs:comment>
+        <contextualOntology:measureRange>distal phalanges of the middle and index fingers</contextualOntology:measureRange>
+        <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/measures/eda#edaElectrodesPlacement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#projectionOfPianistS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#projectionOfPianistS">
+        <rdf:type rdf:resource="&configurations;ConfiguredActuation"/>
+        <rdfs:comment xml:lang="en">Projection of video PianistS.</rdfs:comment>
+        <configurations:inCondition rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionSession4SAE"/>
+        <configurations:madeIn rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#projectionOfSeagullsFinalBS -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#projectionOfSeagullsFinalBS">
+        <rdf:type rdf:resource="&configurations;ConfiguredActuation"/>
+        <rdfs:comment xml:lang="en">Projection of video SeagullsFinalBS.</rdfs:comment>
+        <configurations:inCondition rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionSession3BAE"/>
+        <configurations:madeIn rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#seagullsFinalBS"/>
     </owl:NamedIndividual>
     
 
@@ -326,7 +448,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recBaseStimulusWatchingBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recBaseStimulusWatchingBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
         <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partBaseStimulusWatchingBAE"/>
     </owl:NamedIndividual>
     
@@ -335,7 +457,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recIdleBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recIdleBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
         <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partIdleBAE"/>
     </owl:NamedIndividual>
     
@@ -344,7 +466,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession3BAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession3BAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
         <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession3BAE"/>
     </owl:NamedIndividual>
     
@@ -353,7 +475,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession4SAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recSession4SAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
         <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partSession4SAE"/>
     </owl:NamedIndividual>
     
@@ -362,7 +484,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recStimulusWatchingBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recStimulusWatchingBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
         <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partStimulusWatchingBAE"/>
     </owl:NamedIndividual>
     
@@ -371,7 +493,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#recTaggingTAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#recTaggingTAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Recording"/>
+        <rdf:type rdf:resource="&contextualOntology;Recording"/>
         <contextualOntology:hasParticipation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#partTaggingTAE"/>
     </owl:NamedIndividual>
     
@@ -380,10 +502,10 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#sampling256Hz -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#sampling256Hz">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ssn/systems/SystemCapability"/>
-        <systems:hasSystemProperty rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationProperty250Hz"/>
-        <systems:inCondition rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI"/>
+        <rdf:type rdf:resource="&ssn;systems/SystemCapability"/>
         <rdfs:comment xml:lang="en">Sampling rate of 256Hz.</rdfs:comment>
+        <systems:inCondition rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationConditionMahnobHCI"/>
+        <systems:hasSystemProperty rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#configurationProperty256Hz"/>
     </owl:NamedIndividual>
     
 
@@ -391,7 +513,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#seagullsFinalBS -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#seagullsFinalBS">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#Stimulus"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;Stimulus"/>
         <untitled-ontology-203:hasContext rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#segullFinalContext"/>
     </owl:NamedIndividual>
     
@@ -400,9 +522,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#segullFinalContext -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#segullFinalContext">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#Context"/>
-        <untitled-ontology-203:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">16870</untitled-ontology-203:hasDuration>
-        <untitled-ontology-203:hasFilename rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seagulls_Final.avi</untitled-ontology-203:hasFilename>
+        <rdf:type rdf:resource="&untitled-ontology-203;Context"/>
+        <untitled-ontology-203:hasDuration rdf:datatype="&xsd;unsignedLong">16870</untitled-ontology-203:hasDuration>
+        <untitled-ontology-203:hasFilename rdf:datatype="&xsd;string">seagulls_Final.avi</untitled-ontology-203:hasFilename>
     </owl:NamedIndividual>
     
 
@@ -410,9 +532,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#BaselineActivity"/>
-        <contextualOntology:nextActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivity"/>
         <untitled-ontology-203:hasStimulus rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#seagullsFinalBS"/>
+        <contextualOntology:nextActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA"/>
     </owl:NamedIndividual>
     
 
@@ -420,7 +542,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#BaselineActivityExecution"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;BaselineActivityExecution"/>
         <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session3BA"/>
     </owl:NamedIndividual>
     
@@ -429,7 +551,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#StimulatedActivity"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;StimulatedActivity"/>
     </owl:NamedIndividual>
     
 
@@ -437,7 +559,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#StimulatedActivityExecution"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;StimulatedActivityExecution"/>
         <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA"/>
     </owl:NamedIndividual>
     
@@ -446,7 +568,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#StimulatedActivity"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;StimulatedActivity"/>
         <contextualOntology:isPartOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA"/>
         <contextualOntology:nextActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTA"/>
         <untitled-ontology-203:hasStimulus rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistS"/>
@@ -457,7 +579,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#StimulatedActivityExecution"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;StimulatedActivityExecution"/>
         <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#stimulusWatchingBA"/>
     </owl:NamedIndividual>
     
@@ -466,11 +588,11 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#Participant"/>
-        <contextualOntology:hasNationality rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#nationalityGreek"/>
+        <rdf:type rdf:resource="&contextualOntology;Participant"/>
+        <contextualOntology:dateOfBirth rdf:datatype="&xsd;dateTime">1978-12-07T00:00:00</contextualOntology:dateOfBirth>
+        <contextualOntology:hasNationality rdf:resource="&contextualOntology;nationalityGreek"/>
+        <contextualOntology:hasSex rdf:resource="&contextualOntology;sexMale"/>
         <contextualOntology:hasRace rdf:resource="http://www.semanticweb.org/teresa/ontologies/2022/5/untitled-ontology-272#raceCaucasian"/>
-        <contextualOntology:hasSex rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#sexMale"/>
-        <contextualOntology:dateOfBirth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-12-07T00:00:00</contextualOntology:dateOfBirth>
     </owl:NamedIndividual>
     
 
@@ -478,9 +600,9 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PS">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#ParticipantState"/>
-        <contextualOntology:hasApperance rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PSApperance"/>
+        <rdf:type rdf:resource="&contextualOntology;ParticipantState"/>
         <contextualOntology:hasParticipant rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1"/>
+        <contextualOntology:hasApperance rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PSApperance"/>
     </owl:NamedIndividual>
     
 
@@ -488,10 +610,10 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PSApperance -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#subject1PSApperance">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#ApperanceOcclusionModel"/>
-        <appearanceOcclusion:hasBeardValue rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#appearanceSome"/>
-        <appearanceOcclusion:hasMoustacheValue rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/appearanceOcclusion#appearanceSome"/>
-        <appearanceOcclusion:hasGlasses rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</appearanceOcclusion:hasGlasses>
+        <rdf:type rdf:resource="&appearanceOcclusion;ApperanceOcclusionModel"/>
+        <appearanceOcclusion:hasGlasses rdf:datatype="&xsd;boolean">false</appearanceOcclusion:hasGlasses>
+        <appearanceOcclusion:hasMoustacheValue rdf:resource="&appearanceOcclusion;appearanceSome"/>
+        <appearanceOcclusion:hasBeardValue rdf:resource="&appearanceOcclusion;appearanceSome"/>
     </owl:NamedIndividual>
     
 
@@ -499,7 +621,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTA -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTA">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#TaggingActivity"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;TaggingActivity"/>
         <contextualOntology:isPartOf rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#session4SA"/>
     </owl:NamedIndividual>
     
@@ -508,7 +630,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTAE -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTAE">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#TaggingActivityExecution"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;TaggingActivityExecution"/>
         <contextualOntology:hasActivity rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#taggingTA"/>
     </owl:NamedIndividual>
     
@@ -517,12 +639,12 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistContext -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistContext">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#Context"/>
-        <untitled-ontology-203:hasSourceDataset rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#HHAD"/>
-        <untitled-ontology-203:clipEndTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">3350004</untitled-ontology-203:clipEndTimestamp>
-        <untitled-ontology-203:clipStartTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#unsignedLong">3273003</untitled-ontology-203:clipStartTimestamp>
-        <untitled-ontology-203:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77001</untitled-ontology-203:hasDuration>
-        <untitled-ontology-203:hasFilename rdf:datatype="http://www.w3.org/2001/XMLSchema#string">55.avi</untitled-ontology-203:hasFilename>
+        <rdf:type rdf:resource="&untitled-ontology-203;Context"/>
+        <untitled-ontology-203:clipStartTimestamp rdf:datatype="&xsd;unsignedLong">3273003</untitled-ontology-203:clipStartTimestamp>
+        <untitled-ontology-203:clipEndTimestamp rdf:datatype="&xsd;unsignedLong">3350004</untitled-ontology-203:clipEndTimestamp>
+        <untitled-ontology-203:hasFilename rdf:datatype="&xsd;string">55.avi</untitled-ontology-203:hasFilename>
+        <untitled-ontology-203:hasDuration rdf:datatype="&xsd;integer">77001</untitled-ontology-203:hasDuration>
+        <untitled-ontology-203:hasSourceDataset rdf:resource="&untitled-ontology-203;HHAD"/>
     </owl:NamedIndividual>
     
 
@@ -530,7 +652,7 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistS -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistS">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/stimulus#Stimulus"/>
+        <rdf:type rdf:resource="&untitled-ontology-203;Stimulus"/>
         <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman#anger"/>
         <contextualOntology:hasMeasureName rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology/models/emotionalMeasures/ekman#sadness"/>
         <untitled-ontology-203:hasContext rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#thePianistContext"/>
@@ -541,10 +663,10 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries"/>
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts1.csv</contextualOntology:timeSeriesSource>
         <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
         <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsBaseStimulusWatchingBAE"/>
-        <contextualOntology:timeSeriesSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts1.csv</contextualOntology:timeSeriesSource>
     </owl:NamedIndividual>
     
 
@@ -552,10 +674,10 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts2 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries"/>
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts2.csv</contextualOntology:timeSeriesSource>
         <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
         <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsIdleBAE"/>
-        <contextualOntology:timeSeriesSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts2.csv</contextualOntology:timeSeriesSource>
     </owl:NamedIndividual>
     
 
@@ -563,10 +685,10 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts3 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts3">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries"/>
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts3.csv</contextualOntology:timeSeriesSource>
         <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
         <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession3BAE"/>
-        <contextualOntology:timeSeriesSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts3.csv</contextualOntology:timeSeriesSource>
     </owl:NamedIndividual>
     
 
@@ -574,10 +696,10 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts4">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries"/>
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts4.csv</contextualOntology:timeSeriesSource>
         <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
         <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsSession4SAE"/>
-        <contextualOntology:timeSeriesSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts4.csv</contextualOntology:timeSeriesSource>
     </owl:NamedIndividual>
     
 
@@ -585,10 +707,10 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts5 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts5">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries"/>
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts5.csv</contextualOntology:timeSeriesSource>
         <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
         <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsStimulusWatchingBAE"/>
-        <contextualOntology:timeSeriesSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts5.csv</contextualOntology:timeSeriesSource>
     </owl:NamedIndividual>
     
 
@@ -596,14 +718,14 @@
     <!-- http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts6 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/GRISERA/examples/mahnobhci#ts6">
-        <rdf:type rdf:resource="http://www.semanticweb.org/GRISERA/contextualOntology#RegularlySpacedTimestampTimeSeries"/>
+        <rdf:type rdf:resource="&contextualOntology;RegularlySpacedTimestampTimeSeries"/>
+        <contextualOntology:timeSeriesSource rdf:datatype="&xsd;string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts6.csv</contextualOntology:timeSeriesSource>
         <contextualOntology:hasMeasure rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#galvanicSkinResponseResistanceMeasure"/>
         <contextualOntology:hasObservableInformation rdf:resource="http://www.semanticweb.org/GRISERA/examples/mahnobhci#obsTaggingTAE"/>
-        <contextualOntology:timeSeriesSource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://road.affectivese.org/datasets/MahnobHCIExcerpt/ts6.csv</contextualOntology:timeSeriesSource>
     </owl:NamedIndividual>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
