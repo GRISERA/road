@@ -1096,6 +1096,121 @@
         <Literal xml:lang="en">A pattern of an activity done within an experiment.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Activity</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ActivityExecution</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Arrangement</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MeasureName</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TimeSeries</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EpochTimeSeries</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IrregularlySpacedTimeSeries</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegularlySpacedTimeSeries</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TimestampTimeSeries</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PersonalTwoPersonsArrangement</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Personality</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EmotionalStateMeasureName</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EmotionalStateMeasure</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Apperance</IRI>
+        <Literal xml:lang="en">AbstractClass</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TimeSeries</IRI>
+        <Literal xml:lang="en">HighQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TimestampTimeSeries</IRI>
+        <Literal xml:lang="en">HighQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ConstantLengthEpochTimeSeries</IRI>
+        <Literal xml:lang="en">HighQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#EpochTimeSeries</IRI>
+        <Literal xml:lang="en">HighQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IrregularlySpacedTimeSeries</IRI>
+        <Literal xml:lang="en">HighQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegularlySpacedTimeSeries</IRI>
+        <Literal xml:lang="en">HighQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#VariableLengthEpochTimeSeries</IRI>
+        <Literal xml:lang="en">HighQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IrregularlySpacedTimestampTimeSeries</IRI>
+        <Literal xml:lang="en">HighQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RegularlySpacedTimestampTimeSeries</IRI>
+        <Literal xml:lang="en">HighQuantity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ActivityExecution</IRI>
         <Literal xml:lang="en">An execution of a specific activity described by an activity pattern. An activity execution takes place in a certain period of time.</Literal>
