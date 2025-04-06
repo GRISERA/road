@@ -912,12 +912,12 @@
         <ObjectProperty IRI="#hasScenario"/>
         <Class IRI="#Experiment"/>
     </ObjectPropertyDomain>
-<!--     <ObjectPropertyDomain> -->
-<!--         <ObjectProperty IRI="#hasSex"/> -->
-<!--         <Class IRI="#Participant"/> -->
-<!--     </ObjectPropertyDomain> -->
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hairColor"/>
+        <ObjectProperty IRI="#hasSex"/>
+        <Class IRI="#Participant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSex"/>
         <Class IRI="#Participant"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
