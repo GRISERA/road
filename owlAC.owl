@@ -185,6 +185,9 @@
         <ObjectProperty IRI="#hasSex"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hairColor"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#isNextOfActivityExecution"/>
     </Declaration>
     <Declaration>
@@ -909,8 +912,12 @@
         <ObjectProperty IRI="#hasScenario"/>
         <Class IRI="#Experiment"/>
     </ObjectPropertyDomain>
+<!--     <ObjectPropertyDomain> -->
+<!--         <ObjectProperty IRI="#hasSex"/> -->
+<!--         <Class IRI="#Participant"/> -->
+<!--     </ObjectPropertyDomain> -->
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSex"/>
+        <ObjectProperty IRI="#hairColor"/>
         <Class IRI="#Participant"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
