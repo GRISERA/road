@@ -917,7 +917,7 @@
         <Class IRI="#Participant"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSex"/>
+        <ObjectProperty IRI="#hairColor"/>
         <Class IRI="#Participant"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
